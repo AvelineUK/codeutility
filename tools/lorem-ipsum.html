@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem Ipsum Generator - CodeUtility</title>
+    <meta name="description" content="Free online Lorem Ipsum generator. Generate placeholder text for mockups and designs. Fast, runs entirely in your browser.">
+    <meta property="og:title" content="Lorem Ipsum Generator - CodeUtility">
+    <meta property="og:description" content="Generate Lorem Ipsum placeholder text instantly.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/lorem-ipsum.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>Lorem Ipsum Generator</h1>
+                <p>Generate placeholder text for mockups and designs.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- Options -->
+                <div class="tool-card">
+                    <h3>Generation Options</h3>
+                    
+                    <label for="count">Amount: <span id="countValue">5</span></label>
+                    <input type="range" id="count" min="1" max="50" value="5">
+                    
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="type" value="paragraphs" checked>
+                            Paragraphs
+                        </label>
+                        
+                        <label>
+                            <input type="radio" name="type" value="sentences">
+                            Sentences
+                        </label>
+                        
+                        <label>
+                            <input type="radio" name="type" value="words">
+                            Words
+                        </label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" id="startWithLorem" checked>
+                            Start with "Lorem ipsum dolor sit amet..."
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="btn-group">
+                    <button id="generateBtn" class="btn btn-primary">Generate Text</button>
+                    <button id="clearBtn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <!-- Output Section -->
+                <div class="tool-card">
+                    <label for="output">Generated Text</label>
+                    <textarea 
+                        id="output" 
+                        readonly 
+                        placeholder="Click 'Generate Text' to create Lorem Ipsum..."
+                        aria-label="Generated text"
+                    ></textarea>
+                    <button id="copyBtn" class="btn btn-secondary" style="margin-top: 12px;">
+                        Copy to Clipboard
+                    </button>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>About Lorem Ipsum</h3>
+                    <p>Lorem Ipsum is placeholder text commonly used in the design and publishing industry. It's used for:</p>
+                    <ul>
+                        <li>Website and app mockups</li>
+                        <li>Design presentations</li>
+                        <li>Print layouts and templates</li>
+                        <li>Typography demonstrations</li>
+                        <li>Testing layouts before final content is available</li>
+                    </ul>
+                    <p class="info-tip">
+                        <strong>Note:</strong> Lorem Ipsum originates from a 1st century BC Latin text by Cicero, with sections scrambled to make it nonsensical.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="lorem-ipsum.js"></script>
+</body>
+</html>

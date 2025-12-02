@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Validator - CodeUtility</title>
+    <meta name="description" content="Free online JSON validator. Check if your JSON is valid and get detailed error messages. Fast, runs entirely in your browser.">
+    <meta property="og:title" content="JSON Validator - CodeUtility">
+    <meta property="og:description" content="Validate JSON syntax and get detailed error messages.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/json-validator.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>JSON Validator</h1>
+                <p>Validate JSON syntax and check for errors.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- Input Section -->
+                <div class="tool-card">
+                    <label for="input">JSON Input</label>
+                    <textarea 
+                        id="input" 
+                        placeholder='Enter JSON to validate... Example: {"name": "John", "age": 30}'
+                        aria-label="JSON input"
+                    ></textarea>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="btn-group">
+                    <button id="validateBtn" class="btn btn-primary">Validate JSON</button>
+                    <button id="clearBtn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <!-- Validation Result -->
+                <div id="validationResult" class="alert" style="display: none;">
+                    <span id="resultMessage"></span>
+                </div>
+
+                <!-- JSON Stats (shown when valid) -->
+                <div class="tool-card" id="statsCard" style="display: none;">
+                    <h3>JSON Statistics</h3>
+                    <div class="stat-grid-compact">
+                        <div class="stat-box">
+                            <div class="stat-box-value" id="objectCount">0</div>
+                            <div class="stat-box-label">Objects</div>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <div class="stat-box-value" id="arrayCount">0</div>
+                            <div class="stat-box-label">Arrays</div>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <div class="stat-box-value" id="keyCount">0</div>
+                            <div class="stat-box-label">Keys</div>
+                        </div>
+                        
+                        <div class="stat-box">
+                            <div class="stat-box-value" id="depthLevel">0</div>
+                            <div class="stat-box-label">Max Depth</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>Common JSON Errors</h3>
+                    <ul>
+                        <li>Missing quotes around keys or string values</li>
+                        <li>Trailing commas after last element</li>
+                        <li>Single quotes instead of double quotes</li>
+                        <li>Unescaped special characters in strings</li>
+                        <li>Missing closing brackets or braces</li>
+                    </ul>
+                    <p class="info-tip">
+                        <strong>Tip:</strong> Press <code>Ctrl+Enter</code> to quickly validate your JSON.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="json-validator.js"></script>
+</body>
+</html>

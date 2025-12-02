@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator - CodeUtility</title>
+    <meta name="description" content="Free online QR code generator. Create QR codes from text or URLs. Fast, runs entirely in your browser.">
+    <meta property="og:title" content="QR Code Generator - CodeUtility">
+    <meta property="og:description" content="Generate QR codes from text or URLs instantly.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/qr-code.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>QR Code Generator</h1>
+                <p>Generate QR codes from text or URLs.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- Input Section -->
+                <div class="tool-card">
+                    <label for="input">Text or URL</label>
+                    <textarea 
+                        id="input" 
+                        placeholder="Enter text or URL to encode in QR code..."
+                        aria-label="Input text"
+                    ></textarea>
+                </div>
+
+                <!-- Options -->
+                <div class="tool-card">
+                    <h3>QR Code Options</h3>
+                    
+                    <label for="size">Size: <span id="sizeValue">256</span>px</label>
+                    <input type="range" id="size" min="128" max="512" step="64" value="256">
+                    
+                    <label for="errorCorrection">Error Correction Level</label>
+                    <select id="errorCorrection" style="width: 100%; padding: 10px; border: 1px solid #e5e5e5; border-radius: 6px; font-size: 0.95rem; background: #ffffff; margin-bottom: 20px;">
+                        <option value="L">Low (7% correction)</option>
+                        <option value="M" selected>Medium (15% correction)</option>
+                        <option value="Q">Quartile (25% correction)</option>
+                        <option value="H">High (30% correction)</option>
+                    </select>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="btn-group">
+                    <button id="generateBtn" class="btn btn-primary">Generate QR Code</button>
+                    <button id="downloadBtn" class="btn btn-secondary" style="display: none;">Download PNG</button>
+                    <button id="clearBtn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <!-- QR Code Display -->
+                <div class="tool-card" style="text-align: center;">
+                    <label>Generated QR Code</label>
+                    <div id="qrCodeContainer" style="display: flex; justify-content: center; align-items: center; min-height: 300px; background: #ffffff; border-radius: 8px; margin-top: 16px;">
+                        <em style="color: #a3a3a3;">Your QR code will appear here...</em>
+                    </div>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>About QR Codes</h3>
+                    <p>QR codes (Quick Response codes) can store various types of data and are commonly used for:</p>
+                    <ul>
+                        <li>Website URLs and landing pages</li>
+                        <li>Contact information (vCards)</li>
+                        <li>Wi-Fi network credentials</li>
+                        <li>Product information and tracking</li>
+                        <li>Payment information</li>
+                        <li>Event tickets and check-ins</li>
+                    </ul>
+                    <p class="info-tip">
+                        <strong>Tip:</strong> Higher error correction levels make QR codes more resistant to damage but increase their complexity.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="qr-code.js"></script>
+</body>
+</html>

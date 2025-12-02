@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Tester - CodeUtility</title>
+    <meta name="description" content="Free online regex tester. Test regular expressions with live highlighting and match details. Fast, runs entirely in your browser.">
+    <meta property="og:title" content="Regex Tester - CodeUtility">
+    <meta property="og:description" content="Test regular expressions with live highlighting.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/regex-tester.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>Regex Tester</h1>
+                <p>Test regular expressions with live highlighting and match details.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- Pattern Section -->
+                <div class="tool-card">
+                    <label for="pattern">Regular Expression Pattern</label>
+                    <input 
+                        type="text" 
+                        id="pattern" 
+                        placeholder="Enter regex pattern (e.g., \d+|[A-Z]+)"
+                        aria-label="Regex pattern"
+                    >
+                    
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" id="flagGlobal" checked>
+                            Global (g) - Find all matches
+                        </label>
+                        
+                        <label>
+                            <input type="checkbox" id="flagCaseInsensitive">
+                            Case insensitive (i)
+                        </label>
+                        
+                        <label>
+                            <input type="checkbox" id="flagMultiline">
+                            Multiline (m)
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Test String Section -->
+                <div class="tool-card">
+                    <label for="testString">Test String</label>
+                    <textarea 
+                        id="testString" 
+                        placeholder="Enter text to test against the regex pattern..."
+                        aria-label="Test string"
+                    ></textarea>
+                </div>
+
+                <!-- Results Section -->
+                <div class="tool-card" style="background: #f9fafb;">
+                    <h3>Match Results</h3>
+                    <div id="matchResults" class="regex-results">
+                        <em style="color: #a3a3a3;">Enter a pattern and test string to see matches...</em>
+                    </div>
+                </div>
+
+                <!-- Highlighted Output -->
+                <div class="tool-card">
+                    <label>Highlighted Matches</label>
+                    <div id="highlightedOutput" class="highlighted-output">
+                        <em style="color: #a3a3a3;">Matches will be highlighted here...</em>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="btn-group">
+                    <button id="clearBtn" class="btn btn-secondary">Clear All</button>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>Common Regex Patterns</h3>
+                    <ul>
+                        <li><code>\d+</code> - Match one or more digits</li>
+                        <li><code>[A-Za-z]+</code> - Match one or more letters</li>
+                        <li><code>\w+</code> - Match word characters (letters, digits, underscore)</li>
+                        <li><code>\s+</code> - Match one or more whitespace characters</li>
+                        <li><code>^</code> and <code>$</code> - Match start and end of line</li>
+                        <li><code>.*</code> - Match any character (except newline) zero or more times</li>
+                        <li><code>\b</code> - Match word boundary</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="regex-tester.js"></script>
+</body>
+</html>

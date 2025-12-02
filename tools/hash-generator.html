@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Generator - CodeUtility</title>
+    <meta name="description" content="Free online hash generator. Generate MD5, SHA-1, SHA-256, and SHA-512 hashes. Fast, secure, runs entirely in your browser.">
+    <meta property="og:title" content="Hash Generator - CodeUtility">
+    <meta property="og:description" content="Free online hash generator. Generate MD5, SHA-1, SHA-256, and SHA-512 hashes.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/hash-generator.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>Hash Generator</h1>
+                <p>Generate MD5, SHA-1, SHA-256, and SHA-512 hashes from text.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- Input Section -->
+                <div class="tool-card">
+                    <label for="input">Input Text</label>
+                    <textarea 
+                        id="input" 
+                        placeholder="Enter text to hash..."
+                        aria-label="Input text"
+                    ></textarea>
+                </div>
+
+                <!-- Hash Results -->
+                <div class="tool-card">
+                    <label>MD5</label>
+                    <div class="input-copy-row">
+                        <input 
+                            type="text" 
+                            id="md5Output" 
+                            readonly 
+                            placeholder="MD5 hash will appear here..."
+                        >
+                        <button id="copyMd5" class="btn btn-secondary">Copy</button>
+                    </div>
+
+                    <label>SHA-1</label>
+                    <div class="input-copy-row">
+                        <input 
+                            type="text" 
+                            id="sha1Output" 
+                            readonly 
+                            placeholder="SHA-1 hash will appear here..."
+                        >
+                        <button id="copySha1" class="btn btn-secondary">Copy</button>
+                    </div>
+
+                    <label>SHA-256</label>
+                    <div class="input-copy-row">
+                        <input 
+                            type="text" 
+                            id="sha256Output" 
+                            readonly 
+                            placeholder="SHA-256 hash will appear here..."
+                        >
+                        <button id="copySha256" class="btn btn-secondary">Copy</button>
+                    </div>
+
+                    <label>SHA-512</label>
+                    <div class="input-copy-row">
+                        <input 
+                            type="text" 
+                            id="sha512Output" 
+                            readonly 
+                            placeholder="SHA-512 hash will appear here..."
+                        >
+                        <button id="copySha512" class="btn btn-secondary">Copy</button>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="btn-group">
+                    <button id="generateBtn" class="btn btn-primary">Generate All Hashes</button>
+                    <button id="clearBtn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>About Hash Functions</h3>
+                    <p>Cryptographic hash functions convert text into fixed-length strings. They're commonly used for:</p>
+                    <ul>
+                        <li>Password storage and verification</li>
+                        <li>File integrity checking</li>
+                        <li>Digital signatures</li>
+                        <li>Data verification and checksums</li>
+                    </ul>
+                    <p class="info-tip">
+                        <strong>Note:</strong> MD5 and SHA-1 are no longer considered secure for cryptographic purposes. Use SHA-256 or SHA-512 for security-critical applications.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">Â&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="hash-generator.js"></script>
+</body>
+</html>

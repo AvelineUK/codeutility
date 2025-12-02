@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Generator - CodeUtility</title>
+    <meta name="description" content="Free online color palette generator. Generate beautiful color palettes instantly. Fast, runs entirely in your browser.">
+    <meta property="og:title" content="Color Palette Generator - CodeUtility">
+    <meta property="og:description" content="Generate random color palettes with hex codes.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/color-palette.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>Color Palette Generator</h1>
+                <p>Generate beautiful random color palettes.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- Options -->
+                <div class="tool-card">
+                    <h3>Palette Options</h3>
+                    <label for="colorCount">Number of Colors: <span id="colorCountValue">5</span></label>
+                    <input type="range" id="colorCount" min="3" max="10" value="5">
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="btn-group">
+                    <button id="generateBtn" class="btn btn-primary">Generate Palette</button>
+                    <button id="copyAllBtn" class="btn btn-secondary">Copy All Hex Codes</button>
+                </div>
+
+                <!-- Color Palette Display -->
+                <div class="tool-card">
+                    <div id="paletteDisplay"></div>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>Use Cases</h3>
+                    <ul>
+                        <li>Website and app design color schemes</li>
+                        <li>Brand identity and logo design</li>
+                        <li>UI/UX design inspiration</li>
+                        <li>Digital art and illustration</li>
+                        <li>Marketing materials and graphics</li>
+                    </ul>
+                    <p class="info-tip">
+                        <strong>Tip:</strong> Click any color to copy its hex code. Press Space to generate a new palette.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="color-palette.js"></script>
+</body>
+</html>

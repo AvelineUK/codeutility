@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Radius Generator - CodeUtility</title>
+    <meta name="description" content="Free online CSS border radius generator. Create rounded corners with live preview. Fast, runs entirely in your browser.">
+    <meta property="og:title" content="Border Radius Generator - CodeUtility">
+    <meta property="og:description" content="Generate CSS border radius with live preview.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/border-radius.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>Border Radius Generator</h1>
+                <p>Create rounded corners with live preview.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- Preview -->
+                <div class="tool-card">
+                    <h3>Preview</h3>
+                    <div id="radiusPreviewContainer">
+                        <div id="radiusPreview"></div>
+                    </div>
+                </div>
+
+                <!-- Border Radius Settings -->
+                <div class="tool-card">
+                    <h3>Corner Radius</h3>
+                    
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" id="uniformRadius" checked>
+                            Uniform Radius (All Corners)
+                        </label>
+                    </div>
+                    
+                    <div id="uniformControls">
+                        <label for="allCorners">All Corners: <span id="allCornersValue">8</span>px</label>
+                        <input type="range" id="allCorners" min="0" max="200" value="8">
+                    </div>
+                    
+                    <div id="individualControls" style="display: none;">
+                        <label for="topLeft">Top Left: <span id="topLeftValue">8</span>px</label>
+                        <input type="range" id="topLeft" min="0" max="200" value="8">
+                        
+                        <label for="topRight">Top Right: <span id="topRightValue">8</span>px</label>
+                        <input type="range" id="topRight" min="0" max="200" value="8">
+                        
+                        <label for="bottomRight">Bottom Right: <span id="bottomRightValue">8</span>px</label>
+                        <input type="range" id="bottomRight" min="0" max="200" value="8">
+                        
+                        <label for="bottomLeft">Bottom Left: <span id="bottomLeftValue">8</span>px</label>
+                        <input type="range" id="bottomLeft" min="0" max="200" value="8">
+                    </div>
+                </div>
+
+                <!-- Quick Presets -->
+                <div class="tool-card">
+                    <h3>Popular Presets</h3>
+                    <div class="btn-group">
+                        <button class="btn btn-secondary preset-btn" data-preset="none">None</button>
+                        <button class="btn btn-secondary preset-btn" data-preset="small">Small (4px)</button>
+                        <button class="btn btn-secondary preset-btn" data-preset="medium">Medium (8px)</button>
+                        <button class="btn btn-secondary preset-btn" data-preset="large">Large (16px)</button>
+                        <button class="btn btn-secondary preset-btn" data-preset="pill">Pill (100px)</button>
+                        <button class="btn btn-secondary preset-btn" data-preset="circle">Circle (50%)</button>
+                    </div>
+                </div>
+
+                <!-- CSS Output -->
+                <div class="tool-card">
+                    <label for="cssOutput">CSS Code</label>
+                    <textarea 
+                        id="cssOutput" 
+                        readonly 
+                        placeholder="CSS code will appear here..."
+                        aria-label="CSS output"
+                    ></textarea>
+                    <button id="copyBtn" class="btn btn-secondary copy-section-btn">
+                        Copy CSS
+                    </button>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>Border Radius Guide</h3>
+                    <ul>
+                        <li>Use px values for fixed rounded corners</li>
+                        <li>Use 50% for perfect circles (on square elements)</li>
+                        <li>Control each corner individually for unique shapes</li>
+                        <li>Large values create pill-shaped buttons</li>
+                        <li>Works on images, divs, buttons, and any block element</li>
+                    </ul>
+                    <p class="info-tip">
+                        <strong>Example:</strong> <code>border-radius: 8px;</code>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="border-radius.js"></script>
+</body>
+</html>

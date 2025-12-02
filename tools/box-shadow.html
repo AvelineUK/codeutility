@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow Generator - CodeUtility</title>
+    <meta name="description" content="Free online CSS box shadow generator. Create beautiful shadows with live preview. Fast, runs entirely in your browser.">
+    <meta property="og:title" content="Box Shadow Generator - CodeUtility">
+    <meta property="og:description" content="Generate CSS box shadows with live preview.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/box-shadow.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>Box Shadow Generator</h1>
+                <p>Create beautiful CSS box shadows with live preview.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- Preview -->
+                <div class="tool-card">
+                    <h3>Preview</h3>
+                    <div id="shadowPreviewContainer">
+                        <div id="shadowPreview"></div>
+                    </div>
+                </div>
+
+                <!-- Shadow Settings -->
+                <div class="tool-card">
+                    <h3>Shadow Settings</h3>
+                    
+                    <label for="offsetX">Horizontal Offset: <span id="offsetXValue">0</span>px</label>
+                    <input type="range" id="offsetX" min="-50" max="50" value="0">
+                    
+                    <label for="offsetY">Vertical Offset: <span id="offsetYValue">4</span>px</label>
+                    <input type="range" id="offsetY" min="-50" max="50" value="4">
+                    
+                    <label for="blur">Blur Radius: <span id="blurValue">8</span>px</label>
+                    <input type="range" id="blur" min="0" max="100" value="8">
+                    
+                    <label for="spread">Spread Radius: <span id="spreadValue">0</span>px</label>
+                    <input type="range" id="spread" min="-50" max="50" value="0">
+                    
+                    <label for="shadowColor">Shadow Color</label>
+                    <input type="color" id="shadowColor" value="#000000">
+                    
+                    <label for="opacity">Opacity: <span id="opacityValue">25</span>%</label>
+                    <input type="range" id="opacity" min="0" max="100" value="25">
+                    
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" id="insetShadow">
+                            Inset Shadow
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Quick Presets -->
+                <div class="tool-card">
+                    <h3>Popular Presets</h3>
+                    <div class="btn-group">
+                        <button class="btn btn-secondary preset-btn" data-preset="subtle">Subtle</button>
+                        <button class="btn btn-secondary preset-btn" data-preset="medium">Medium</button>
+                        <button class="btn btn-secondary preset-btn" data-preset="large">Large</button>
+                        <button class="btn btn-secondary preset-btn" data-preset="inner">Inner</button>
+                        <button class="btn btn-secondary preset-btn" data-preset="none">None</button>
+                    </div>
+                </div>
+
+                <!-- CSS Output -->
+                <div class="tool-card">
+                    <label for="cssOutput">CSS Code</label>
+                    <textarea 
+                        id="cssOutput" 
+                        readonly 
+                        placeholder="CSS code will appear here..."
+                        aria-label="CSS output"
+                    ></textarea>
+                    <button id="copyBtn" class="btn btn-secondary copy-section-btn">
+                        Copy CSS
+                    </button>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>Box Shadow Properties</h3>
+                    <ul>
+                        <li><strong>Horizontal Offset:</strong> Moves shadow left (negative) or right (positive)</li>
+                        <li><strong>Vertical Offset:</strong> Moves shadow up (negative) or down (positive)</li>
+                        <li><strong>Blur Radius:</strong> Higher values create softer shadows</li>
+                        <li><strong>Spread Radius:</strong> Expands (positive) or shrinks (negative) the shadow</li>
+                        <li><strong>Inset:</strong> Creates an inner shadow effect</li>
+                    </ul>
+                    <p class="info-tip">
+                        <strong>Example:</strong> <code>box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);</code>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="box-shadow.js"></script>
+</body>
+</html>

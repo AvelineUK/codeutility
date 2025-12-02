@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cron Expression Builder - CodeUtility</title>
+    <meta name="description" content="Free online cron expression builder. Build and understand cron expressions visually. Fast, runs entirely in your browser.">
+    <meta property="og:title" content="Cron Expression Builder - CodeUtility">
+    <meta property="og:description" content="Build and understand cron expressions visually.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/cron-builder.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>Cron Expression Builder</h1>
+                <p>Build and understand cron expressions visually.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- Generated Expression -->
+                <div class="tool-card">
+                    <label>Generated Cron Expression</label>
+                    <div id="cronExpression" class="cron-expression-display">* * * * *</div>
+                    <div id="cronDescription" class="cron-description">
+                        Every minute
+                    </div>
+                    <button id="copyBtn" class="btn btn-secondary" style="margin-top: 16px">
+                        Copy Expression
+                    </button>
+                </div>
+
+                <!-- Row 1: Minutes, Hours, Day of Month -->
+                <div class="cron-fields-row">
+                    <!-- Minutes -->
+                    <div class="cron-field-group">
+                        <div class="cron-field-header">
+                            <span class="cron-field-title">Minutes</span>
+                            <span id="minuteValue" class="cron-field-value">*</span>
+                        </div>
+                        <div class="cron-options">
+                            <div class="cron-option">
+                                <input type="radio" name="minute" id="minuteEvery" value="*" checked>
+                                <label for="minuteEvery">Every minute</label>
+                            </div>
+                            <div class="cron-option">
+                                <input type="radio" name="minute" id="minuteSpecific" value="specific">
+                                <div class="cron-option-input">
+                                    <label for="minuteSpecificValue">At minute:</label>
+                                    <input type="number" id="minuteSpecificValue" min="0" max="59" value="0">
+                                </div>
+                            </div>
+                            <div class="cron-option">
+                                <input type="radio" name="minute" id="minuteEveryX" value="everyX">
+                                <div class="cron-option-input">
+                                    <label for="minuteEveryXValue">Every:</label>
+                                    <input type="number" id="minuteEveryXValue" min="1" max="59" value="5">
+                                    <span>minutes</span>
+                                </div>
+                            </div>
+                            <div class="cron-option">
+                                <input type="radio" name="minute" id="minuteRange" value="range">
+                                <div class="cron-option-input">
+                                    <label for="minuteRangeStart">From:</label>
+                                    <input type="number" id="minuteRangeStart" min="0" max="59" value="0">
+                                    <label for="minuteRangeEnd">to:</label>
+                                    <input type="number" id="minuteRangeEnd" min="0" max="59" value="30">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hours -->
+                    <div class="cron-field-group">
+                        <div class="cron-field-header">
+                            <span class="cron-field-title">Hours</span>
+                            <span id="hourValue" class="cron-field-value">*</span>
+                        </div>
+                        <div class="cron-options">
+                            <div class="cron-option">
+                                <input type="radio" name="hour" id="hourEvery" value="*" checked>
+                                <label for="hourEvery">Every hour</label>
+                            </div>
+                            <div class="cron-option">
+                                <input type="radio" name="hour" id="hourSpecific" value="specific">
+                                <div class="cron-option-input">
+                                    <label for="hourSpecificValue">At hour:</label>
+                                    <input type="number" id="hourSpecificValue" min="0" max="23" value="0">
+                                </div>
+                            </div>
+                            <div class="cron-option">
+                                <input type="radio" name="hour" id="hourEveryX" value="everyX">
+                                <div class="cron-option-input">
+                                    <label for="hourEveryXValue">Every:</label>
+                                    <input type="number" id="hourEveryXValue" min="1" max="23" value="6">
+                                    <span>hours</span>
+                                </div>
+                            </div>
+                            <div class="cron-option">
+                                <input type="radio" name="hour" id="hourRange" value="range">
+                                <div class="cron-option-input">
+                                    <label for="hourRangeStart">From:</label>
+                                    <input type="number" id="hourRangeStart" min="0" max="23" value="9">
+                                    <label for="hourRangeEnd">to:</label>
+                                    <input type="number" id="hourRangeEnd" min="0" max="23" value="17">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day of Month -->
+                    <div class="cron-field-group">
+                        <div class="cron-field-header">
+                            <span class="cron-field-title">Day of Month</span>
+                            <span id="dayValue" class="cron-field-value">*</span>
+                        </div>
+                        <div class="cron-options">
+                            <div class="cron-option">
+                                <input type="radio" name="day" id="dayEvery" value="*" checked>
+                                <label for="dayEvery">Every day</label>
+                            </div>
+                            <div class="cron-option">
+                                <input type="radio" name="day" id="daySpecific" value="specific">
+                                <div class="cron-option-input">
+                                    <label for="daySpecificValue">On day:</label>
+                                    <input type="number" id="daySpecificValue" min="1" max="31" value="1">
+                                </div>
+                            </div>
+                            <div class="cron-option">
+                                <input type="radio" name="day" id="dayEveryX" value="everyX">
+                                <div class="cron-option-input">
+                                    <label for="dayEveryXValue">Every:</label>
+                                    <input type="number" id="dayEveryXValue" min="1" max="31" value="2">
+                                    <span>days</span>
+                                </div>
+                            </div>
+                            <div class="cron-option">
+                                <input type="radio" name="day" id="dayLast" value="L">
+                                <label for="dayLast">Last day of month</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Month -->
+                <div class="cron-field-group">
+                    <div class="cron-field-header">
+                        <span class="cron-field-title">Month</span>
+                        <span id="monthValue" class="cron-field-value">*</span>
+                    </div>
+                    <div class="cron-options">
+                        <div class="cron-option">
+                            <input type="radio" name="month" id="monthEvery" value="*" checked>
+                            <label for="monthEvery">Every month</label>
+                        </div>
+                        <div class="cron-option">
+                            <input type="radio" name="month" id="monthSpecific" value="specific">
+                            <div class="cron-option-input">
+                                <label for="monthSpecificValue">In month:</label>
+                                <select id="monthSpecificValue">
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="cron-option">
+                            <input type="radio" name="month" id="monthMultiple" value="multiple">
+                            <div>
+                                <label for="monthMultiple">Specific months:</label>
+                                <div class="checkboxes-grid">
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="month1" value="1">
+                                        <label for="month1">Jan</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="month2" value="2">
+                                        <label for="month2">Feb</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="month3" value="3">
+                                        <label for="month3">Mar</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="month4" value="4">
+                                        <label for="month4">Apr</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="month5" value="5">
+                                        <label for="month5">May</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="month6" value="6">
+                                        <label for="month6">Jun</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="month7" value="7">
+                                        <label for="month7">Jul</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="month8" value="8">
+                                        <label for="month8">Aug</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="month9" value="9">
+                                        <label for="month9">Sep</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="month10" value="10">
+                                        <label for="month10">Oct</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="month11" value="11">
+                                        <label for="month11">Nov</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="month12" value="12">
+                                        <label for="month12">Dec</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day of Week -->
+                <div class="cron-field-group">
+                    <div class="cron-field-header">
+                        <span class="cron-field-title">Day of Week</span>
+                        <span id="weekdayValue" class="cron-field-value">*</span>
+                    </div>
+                    <div class="cron-options">
+                        <div class="cron-option">
+                            <input type="radio" name="weekday" id="weekdayEvery" value="*" checked>
+                            <label for="weekdayEvery">Every day of week</label>
+                        </div>
+                        <div class="cron-option">
+                            <input type="radio" name="weekday" id="weekdaySpecific" value="specific">
+                            <div class="cron-option-input">
+                                <label for="weekdaySpecificValue">On:</label>
+                                <select id="weekdaySpecificValue">
+                                    <option value="0">Sunday</option>
+                                    <option value="1">Monday</option>
+                                    <option value="2">Tuesday</option>
+                                    <option value="3">Wednesday</option>
+                                    <option value="4">Thursday</option>
+                                    <option value="5">Friday</option>
+                                    <option value="6">Saturday</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="cron-option">
+                            <input type="radio" name="weekday" id="weekdayMultiple" value="multiple">
+                            <div>
+                                <label for="weekdayMultiple">Specific days:</label>
+                                <div class="checkboxes-grid days-grid">
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="weekday0" value="0">
+                                        <label for="weekday0">Sun</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="weekday1" value="1">
+                                        <label for="weekday1">Mon</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="weekday2" value="2">
+                                        <label for="weekday2">Tue</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="weekday3" value="3">
+                                        <label for="weekday3">Wed</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="weekday4" value="4">
+                                        <label for="weekday4">Thu</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="weekday5" value="5">
+                                        <label for="weekday5">Fri</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="weekday6" value="6">
+                                        <label for="weekday6">Sat</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cron-option">
+                            <input type="radio" name="weekday" id="weekdayWeekdays" value="1-5">
+                            <label for="weekdayWeekdays">Weekdays (Mon-Fri)</label>
+                        </div>
+                        <div class="cron-option">
+                            <input type="radio" name="weekday" id="weekdayWeekends" value="0,6">
+                            <label for="weekdayWeekends">Weekends (Sat-Sun)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Next Run Times -->
+                <div class="tool-card">
+                    <h3>Next Scheduled Runs</h3>
+                    <div class="next-runs">
+                        <ul id="nextRunsList" class="next-runs-list">
+                            <li>Calculating...</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>About Cron Expressions</h3>
+                    <p>Cron expressions are used to schedule tasks in Unix-like systems. The format is:</p>
+                    <p><code>minute hour day-of-month month day-of-week</code></p>
+                    <ul>
+                        <li><code>*</code> - Any value</li>
+                        <li><code>*/n</code> - Every n units</li>
+                        <li><code>n-m</code> - Range from n to m</li>
+                        <li><code>n,m</code> - Specific values n and m</li>
+                        <li><code>L</code> - Last (day of month)</li>
+                    </ul>
+                    <p class="info-tip">
+                        <strong>Example:</strong> <code>0 9 * * 1-5</code> means "At 9:00 AM, Monday through Friday"
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="cron-builder.js"></script>
+</body>
+</html>

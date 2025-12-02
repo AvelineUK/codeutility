@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Converter - CodeUtility</title>
+    <meta name="description" content="Free online binary converter. Convert text to binary and binary to text. Fast, runs entirely in your browser.">
+    <meta property="og:title" content="Binary Converter - CodeUtility">
+    <meta property="og:description" content="Convert text to binary and back.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/binary-converter.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>Binary Converter</h1>
+                <p>Convert text to binary and vice versa.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- Input Section -->
+                <div class="tool-card">
+                    <label for="input">Input</label>
+                    <textarea 
+                        id="input" 
+                        placeholder="Enter text to convert to binary or binary string to decode..."
+                        aria-label="Input text"
+                    ></textarea>
+                </div>
+
+                <!-- Format Options -->
+                <div class="tool-card">
+                    <h3>Binary Format</h3>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="format" value="space" checked>
+                            Space Separated (01001000 01100101 01101100 01101100 01101111)
+                        </label>
+                        
+                        <label>
+                            <input type="radio" name="format" value="continuous">
+                            Continuous (0100100001100101011011000110110001101111)
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="btn-group">
+                    <button id="encodeBtn" class="btn btn-primary">Text to Binary</button>
+                    <button id="decodeBtn" class="btn btn-primary">Binary to Text</button>
+                    <button id="clearBtn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <!-- Output Section -->
+                <div class="tool-card">
+                    <label for="output">Output</label>
+                    <textarea 
+                        id="output" 
+                        readonly 
+                        placeholder="Result will appear here..."
+                        aria-label="Output text"
+                    ></textarea>
+                    <button id="copyBtn" class="btn btn-secondary" style="margin-top: 12px;">
+                        Copy to Clipboard
+                    </button>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>About Binary</h3>
+                    <p>Binary (base-2) is the fundamental language of computers, using only 0s and 1s. Common uses include:</p>
+                    <ul>
+                        <li>Computer data storage and processing</li>
+                        <li>Digital circuits and logic gates</li>
+                        <li>Network protocols and data transmission</li>
+                        <li>Understanding computer architecture</li>
+                        <li>Programming and debugging</li>
+                    </ul>
+                    <p class="info-tip">
+                        <strong>Example:</strong> "Hi" = 01001000 01101001 in binary (8 bits per character)
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="binary-converter.js"></script>
+</body>
+</html>

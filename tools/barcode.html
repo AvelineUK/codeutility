@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcode Generator - CodeUtility</title>
+    <meta name="description" content="Free online barcode generator. Create barcodes in multiple formats. Fast, runs entirely in your browser.">
+    <meta property="og:title" content="Barcode Generator - CodeUtility">
+    <meta property="og:description" content="Generate barcodes instantly for free.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/barcode.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>Barcode Generator</h1>
+                <p>Generate barcodes in multiple formats.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- Input Section -->
+                <div class="tool-card">
+                    <label for="input">Barcode Content</label>
+                    <input type="text" id="input" placeholder="Enter text or numbers..." aria-label="Barcode content">
+                    
+                    <label for="format" style="margin-top: 16px;">Barcode Format</label>
+                    <select id="format">
+                        <option value="CODE128">CODE128 (Alphanumeric)</option>
+                        <option value="CODE39">CODE39 (Alphanumeric)</option>
+                        <option value="EAN13">EAN13 (13 digits)</option>
+                        <option value="UPC">UPC (12 digits)</option>
+                        <option value="ITF14">ITF14 (14 digits)</option>
+                    </select>
+                </div>
+
+                <!-- Options -->
+                <div class="tool-card">
+                    <h3>Display Options</h3>
+                    
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" id="displayValue" checked>
+                            Show Text Below Barcode
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="btn-group">
+                    <button id="generateBtn" class="btn btn-primary">Generate Barcode</button>
+                    <button id="downloadBtn" class="btn btn-secondary" style="display: none;">Download PNG</button>
+                    <button id="clearBtn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <!-- Barcode Display -->
+                <div class="tool-card" id="barcodeDisplay" style="display: none;">
+                    <h3>Your Barcode</h3>
+                    <div id="barcodeContainer"></div>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>Barcode Formats</h3>
+                    <ul>
+                        <li><strong>CODE128:</strong> Supports letters, numbers, and symbols</li>
+                        <li><strong>CODE39:</strong> Alphanumeric and some special characters</li>
+                        <li><strong>EAN13:</strong> European Article Number (13 digits, e.g., product barcodes)</li>
+                        <li><strong>UPC:</strong> Universal Product Code (12 digits, North America)</li>
+                        <li><strong>ITF14:</strong> Interleaved 2 of 5 (14 digits, packaging/shipping)</li>
+                    </ul>
+                    <p class="info-tip">
+                        <strong>Note:</strong> Barcodes are generated locally. No data is sent to any server.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.min.js"></script>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="barcode.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Generator - CodeUtility</title>
+    <meta name="description" content="Free online CSS gradient generator. Create beautiful linear and radial gradients with live preview. Fast, runs entirely in your browser.">
+    <meta property="og:title" content="Gradient Generator - CodeUtility">
+    <meta property="og:description" content="Generate CSS gradients with live preview.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/gradient-generator.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>Gradient Generator</h1>
+                <p>Create beautiful CSS gradients with live preview.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- Gradient Preview -->
+                <div class="tool-card">
+                    <h3>Preview</h3>
+                    <div id="gradientPreview"></div>
+                </div>
+
+                <!-- Gradient Options -->
+                <div class="tool-card">
+                    <h3>Gradient Settings</h3>
+                    
+                    <label>Gradient Type</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="gradientType" value="linear" checked>
+                            Linear
+                        </label>
+                        <label>
+                            <input type="radio" name="gradientType" value="radial">
+                            Radial
+                        </label>
+                    </div>
+                    
+                    <label for="direction">Direction (degrees)</label>
+                    <input type="number" id="direction" value="90" min="0" max="360">
+                    
+                <div class="color-inputs-row">
+                    <div>
+                        <label for="color1">Color 1</label>
+                        <input type="color" id="color1" value="#3b82f6">
+                    </div>
+                    <div>
+                        <label for="color2">Color 2</label>
+                        <input type="color" id="color2" value="#8b5cf6">
+                    </div>
+                </div>
+                </div>
+
+                <!-- Quick Presets -->
+                <div class="tool-card">
+                    <h3>Popular Presets</h3>
+                    <div class="btn-group">
+                        <button class="btn btn-secondary preset-btn" data-color1="#667eea" data-color2="#764ba2">Purple</button>
+                        <button class="btn btn-secondary preset-btn" data-color1="#f093fb" data-color2="#f5576c">Pink</button>
+                        <button class="btn btn-secondary preset-btn" data-color1="#4facfe" data-color2="#00f2fe">Blue</button>
+                        <button class="btn btn-secondary preset-btn" data-color1="#43e97b" data-color2="#38f9d7">Green</button>
+                        <button class="btn btn-secondary preset-btn" data-color1="#fa709a" data-color2="#fee140">Sunset</button>
+                    </div>
+                </div>
+
+                <!-- CSS Output -->
+                <div class="tool-card">
+                    <label for="cssOutput">CSS Code</label>
+                    <textarea 
+                        id="cssOutput" 
+                        readonly 
+                        placeholder="CSS code will appear here..."
+                        aria-label="CSS output"
+                    ></textarea>
+                    <button id="copyBtn" class="btn btn-secondary copy-section-btn">
+                        Copy CSS
+                    </button>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>Using CSS Gradients</h3>
+                    <ul>
+                        <li>Copy the CSS code and apply to <code>background</code> property</li>
+                        <li>Linear gradients flow in a straight line (default: top to bottom)</li>
+                        <li>Radial gradients radiate from a center point outward</li>
+                        <li>Use degrees (0-360) to control linear gradient direction</li>
+                        <li>Supported in all modern browsers</li>
+                    </ul>
+                    <p class="info-tip">
+                        <strong>Example:</strong> <code>background: linear-gradient(90deg, #3b82f6, #8b5cf6);</code>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="gradient-generator.js"></script>
+</body>
+</html>

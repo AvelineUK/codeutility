@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Converter - CodeUtility</title>
+    <meta name="description" content="Free online case converter. Convert between camelCase, snake_case, PascalCase, kebab-case, and more. Fast, runs entirely in your browser.">
+    <meta property="og:title" content="Case Converter - CodeUtility">
+    <meta property="og:description" content="Convert between camelCase, snake_case, PascalCase, kebab-case, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/case-converter.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>Case Converter</h1>
+                <p>Convert text between different naming conventions and case styles.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- Input Section -->
+                <div class="tool-card">
+                    <label for="input">Input Text</label>
+                    <textarea 
+                        id="input" 
+                        placeholder="Enter text to convert (e.g., 'hello world' or 'helloWorld')..."
+                        aria-label="Input text"
+                    ></textarea>
+                </div>
+
+                <!-- Conversion Results -->
+                <div class="tool-card">
+                    <label>camelCase</label>
+                    <div class="input-copy-row">
+                        <input 
+                            type="text" 
+                            id="camelCase" 
+                            readonly 
+                            placeholder="helloWorld"
+                        >
+                        <button class="btn btn-secondary copy-btn" data-target="camelCase">Copy</button>
+                    </div>
+
+                    <label>PascalCase</label>
+                    <div class="input-copy-row">
+                        <input 
+                            type="text" 
+                            id="pascalCase" 
+                            readonly 
+                            placeholder="HelloWorld"
+                        >
+                        <button class="btn btn-secondary copy-btn" data-target="pascalCase">Copy</button>
+                    </div>
+
+                    <label>snake_case</label>
+                    <div class="input-copy-row">
+                        <input 
+                            type="text" 
+                            id="snakeCase" 
+                            readonly 
+                            placeholder="hello_world"
+                        >
+                        <button class="btn btn-secondary copy-btn" data-target="snakeCase">Copy</button>
+                    </div>
+
+                    <label>kebab-case</label>
+                    <div class="input-copy-row">
+                        <input 
+                            type="text" 
+                            id="kebabCase" 
+                            readonly 
+                            placeholder="hello-world"
+                        >
+                        <button class="btn btn-secondary copy-btn" data-target="kebabCase">Copy</button>
+                    </div>
+
+                    <label>CONSTANT_CASE</label>
+                    <div class="input-copy-row">
+                        <input 
+                            type="text" 
+                            id="constantCase" 
+                            readonly 
+                            placeholder="HELLO_WORLD"
+                        >
+                        <button class="btn btn-secondary copy-btn" data-target="constantCase">Copy</button>
+                    </div>
+
+                    <label>dot.case</label>
+                    <div class="input-copy-row">
+                        <input 
+                            type="text" 
+                            id="dotCase" 
+                            readonly 
+                            placeholder="hello.world"
+                        >
+                        <button class="btn btn-secondary copy-btn" data-target="dotCase">Copy</button>
+                    </div>
+
+                    <label>Title Case</label>
+                    <div class="input-copy-row">
+                        <input 
+                            type="text" 
+                            id="titleCase" 
+                            readonly 
+                            placeholder="Hello World"
+                        >
+                        <button class="btn btn-secondary copy-btn" data-target="titleCase">Copy</button>
+                    </div>
+
+                    <label>Sentence case</label>
+                    <div class="input-copy-row">
+                        <input 
+                            type="text" 
+                            id="sentenceCase" 
+                            readonly 
+                            placeholder="Hello world"
+                        >
+                        <button class="btn btn-secondary copy-btn" data-target="sentenceCase">Copy</button>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="btn-group">
+                    <button id="clearBtn" class="btn btn-secondary">Clear All</button>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>Case Conversion Guide</h3>
+                    <ul>
+                        <li><strong>camelCase:</strong> Variables in JavaScript, Java (e.g., userName)</li>
+                        <li><strong>PascalCase:</strong> Class names, React components (e.g., UserProfile)</li>
+                        <li><strong>snake_case:</strong> Variables in Python, Ruby (e.g., user_name)</li>
+                        <li><strong>kebab-case:</strong> URLs, CSS classes (e.g., user-profile)</li>
+                        <li><strong>CONSTANT_CASE:</strong> Constants in most languages (e.g., MAX_SIZE)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="case-converter.js"></script>
+</body>
+</html>

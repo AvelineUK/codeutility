@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker - CodeUtility</title>
+    <meta name="description" content="Free online color picker. Pick colors and get HEX, RGB, and HSL values instantly. Fast, runs entirely in your browser.">
+    <meta property="og:title" content="Color Picker - CodeUtility">
+    <meta property="og:description" content="Pick colors and get multiple format codes instantly.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/color-picker.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>Color Picker</h1>
+                <p>Pick colors and get HEX, RGB, and HSL values.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- Color Picker -->
+                <div class="tool-card">
+                    <h3>Pick a Color</h3>
+                    <div id="colorDisplay"></div>
+                    <label class="color-picker-label">
+                        <span class="btn btn-primary">Choose a Color</span>
+                        <input type="color" id="colorPicker" value="#3b82f6" aria-label="Color picker">
+                    </label>
+                </div>
+
+                <!-- Color Formats -->
+                <div class="tool-card">
+                    <h3>Color Values</h3>
+                    
+                    <label>HEX</label>
+                    <div class="input-copy-row">
+                        <input type="text" id="hexValue" readonly aria-label="HEX value">
+                        <button class="btn btn-secondary copy-btn" data-target="hexValue">Copy</button>
+                    </div>
+                    
+                    <label>RGB</label>
+                    <div class="input-copy-row">
+                        <input type="text" id="rgbValue" readonly aria-label="RGB value">
+                        <button class="btn btn-secondary copy-btn" data-target="rgbValue">Copy</button>
+                    </div>
+                    
+                    <label>HSL</label>
+                    <div class="input-copy-row">
+                        <input type="text" id="hslValue" readonly aria-label="HSL value">
+                        <button class="btn btn-secondary copy-btn" data-target="hslValue">Copy</button>
+                    </div>
+                    
+                    <label>RGB Object</label>
+                    <div class="input-copy-row">
+                        <input type="text" id="rgbObject" readonly aria-label="RGB object">
+                        <button class="btn btn-secondary copy-btn" data-target="rgbObject">Copy</button>
+                    </div>
+                </div>
+
+                <!-- Recent Colors -->
+                <div class="tool-card">
+                    <h3>Recent Colors (Last 10)</h3>
+                    <div id="recentColors"></div>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>Color Format Guide</h3>
+                    <ul>
+                        <li><strong>HEX:</strong> #RRGGBB format (e.g., #3B82F6)</li>
+                        <li><strong>RGB:</strong> Red, Green, Blue values 0-255</li>
+                        <li><strong>HSL:</strong> Hue (0-360°), Saturation (0-100%), Lightness (0-100%)</li>
+                        <li><strong>RGB Object:</strong> JavaScript/JSON object format</li>
+                    </ul>
+                    <p class="info-tip">
+                        <strong>Tip:</strong> Click any recent color to select it again.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="color-picker.js"></script>
+</body>
+</html>

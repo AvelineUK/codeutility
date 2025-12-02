@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UUID Generator - CodeUtility</title>
+    <meta name="description" content="Free online UUID generator. Generate random UUIDs (v4). Fast, secure, runs entirely in your browser.">
+    <meta property="og:title" content="UUID Generator - CodeUtility">
+    <meta property="og:description" content="Generate random UUIDs (v4) instantly.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/uuid.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>UUID Generator</h1>
+                <p>Generate random UUIDs (Universally Unique Identifiers).</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- Current UUID -->
+                <div class="tool-card">
+                    <label for="currentUuid">Current UUID</label>
+                    <textarea 
+                        id="currentUuid" 
+                        readonly 
+                        placeholder="Click 'Generate UUID' to create a new UUID..."
+                        aria-label="Current UUID"
+                    ></textarea>
+                    <button id="copyBtn" class="btn btn-secondary" style="margin-top: 12px;">
+                        Copy to Clipboard
+                    </button>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="btn-group">
+                    <button id="generateBtn" class="btn btn-primary">Generate UUID</button>
+                    <button id="generateMultipleBtn" class="btn btn-secondary">Generate 10 UUIDs</button>
+                    <button id="clearBtn" class="btn btn-secondary">Clear History</button>
+                </div>
+
+                <!-- History -->
+                <div class="tool-card" style="background: #f9fafb;">
+                    <h3>Recently Generated (Last 10)</h3>
+                    <div id="history" class="history-display">
+                        <em style="color: #a3a3a3;">No UUIDs generated yet...</em>
+                    </div>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>About UUIDs</h3>
+                    <p>A UUID (Universally Unique Identifier) is a 128-bit number used to uniquely identify information. UUIDs are commonly used for:</p>
+                    <ul>
+                        <li>Database primary keys</li>
+                        <li>Session IDs and tokens</li>
+                        <li>File and resource identification</li>
+                        <li>Distributed systems</li>
+                        <li>API request tracking</li>
+                    </ul>
+                    <p class="info-tip">
+                        <strong>Note:</strong> This tool generates Version 4 UUIDs, which are randomly generated and have virtually zero chance of collision.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="uuid.js"></script>
+</body>
+</html>
