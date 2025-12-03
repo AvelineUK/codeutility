@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Resizer - CodeUtility</title>
+    <meta name="description" content="Free online image resizer. Resize images in your browser. Fast, secure, runs entirely in your browser.">
+    <meta property="og:title" content="Image Resizer - CodeUtility">
+    <meta property="og:description" content="Resize images in your browser.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/image-resizer.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>Image Resizer</h1>
+                <p>Resize images in your browser - no uploads to servers.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- Upload Section -->
+                <div class="tool-card">
+                    <label for="imageUpload">Upload Image</label>
+                    <input type="file" id="imageUpload" accept="image/*">
+                    <p style="font-size: 0.85rem; color: #737373; margin-top: 8px;">Supported formats: JPG, PNG, GIF, WebP</p>
+                </div>
+
+                <!-- Original Image Info -->
+                <div class="tool-card" id="originalInfo" style="display: none; background: #f9fafb;">
+                    <h3>Original Image</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                        <div class="stat-box">
+                            <div class="stat-box-value" id="originalWidth">0</div>
+                            <div class="stat-box-label">Width (px)</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-box-value" id="originalHeight">0</div>
+                            <div class="stat-box-label">Height (px)</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-box-value" id="originalSize">0 KB</div>
+                            <div class="stat-box-label">File Size</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resize Options -->
+                <div class="tool-card" id="resizeOptions" style="display: none;">
+                    <h3>Resize Options</h3>
+                    
+                    <div class="form-row">
+                        <label for="newWidth">New Width (px)</label>
+                        <input type="number" id="newWidth" min="1" placeholder="Width">
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="newHeight">New Height (px)</label>
+                        <input type="number" id="newHeight" min="1" placeholder="Height">
+                    </div>
+                    
+                    <div class="form-row">
+                        <label></label>
+                        <label style="margin-bottom: 0; font-weight: 400; cursor: pointer;">
+                            <input type="checkbox" id="maintainRatio" checked style="width: auto; cursor: pointer; margin-right: 8px;">
+                            Maintain aspect ratio
+                        </label>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="quality">Quality</label>
+                        <div style="flex: 1;">
+                            <input type="range" id="quality" min="1" max="100" value="90" style="width: 100%;">
+                            <p style="font-size: 0.85rem; color: #737373; margin-top: 4px; text-align: right;">Quality: <span id="qualityValue">90</span>%</p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="format">Output Format</label>
+                        <select id="format">
+                            <option value="image/jpeg">JPEG</option>
+                            <option value="image/png">PNG</option>
+                            <option value="image/webp">WebP</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="btn-group" id="actionButtons" style="display: none;">
+                    <button id="resizeBtn" class="btn btn-primary">Resize Image</button>
+                    <button id="resetBtn" class="btn btn-secondary">Reset</button>
+                </div>
+
+                <!-- Preview -->
+                <div class="tool-card" id="previewSection" style="display: none;">
+                    <h3>Preview & Download</h3>
+                    <div style="text-align: center; margin-bottom: 16px;">
+                        <canvas id="previewCanvas" style="max-width: 100%; border: 1px solid #e5e5e5; border-radius: 6px;"></canvas>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 16px;">
+                        <div class="stat-box">
+                            <div class="stat-box-value" id="newWidthDisplay">0</div>
+                            <div class="stat-box-label">Width (px)</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-box-value" id="newHeightDisplay">0</div>
+                            <div class="stat-box-label">Height (px)</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-box-value" id="newSize">0 KB</div>
+                            <div class="stat-box-label">Estimated Size</div>
+                        </div>
+                    </div>
+                    <button id="downloadBtn" class="btn btn-primary" style="width: 100%;">Download Resized Image</button>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>About Image Resizing</h3>
+                    <p>Resize images directly in your browser for:</p>
+                    <ul>
+                        <li>Reducing file sizes for web uploads</li>
+                        <li>Creating thumbnails</li>
+                        <li>Optimizing images for email</li>
+                        <li>Social media profile pictures</li>
+                        <li>Blog post images</li>
+                    </ul>
+                    <p class="info-tip">
+                        <strong>Privacy:</strong> All processing happens in your browser. Images are never uploaded to any server.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="image-resizer.js"></script>
+</body>
+</html>

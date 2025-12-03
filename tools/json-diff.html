@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Diff - CodeUtility</title>
+    <meta name="description" content="Free online JSON diff tool. Compare two JSON objects and see differences. Fast, secure, runs entirely in your browser.">
+    <meta property="og:title" content="JSON Diff - CodeUtility">
+    <meta property="og:description" content="Compare two JSON objects and see differences.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/json-diff.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>JSON Diff</h1>
+                <p>Compare two JSON objects and see the differences.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- Input Section -->
+                <div class="diff-container">
+                    <div class="diff-column">
+                        <div class="tool-card">
+                            <label for="input1">JSON 1 (Original)</label>
+                            <textarea 
+                                id="input1" 
+                                placeholder="Paste first JSON here..."
+                                aria-label="First JSON input"
+                            ></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="diff-column">
+                        <div class="tool-card">
+                            <label for="input2">JSON 2 (Modified)</label>
+                            <textarea 
+                                id="input2" 
+                                placeholder="Paste second JSON here..."
+                                aria-label="Second JSON input"
+                            ></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="btn-group">
+                    <button id="compareBtn" class="btn btn-primary">Compare JSON</button>
+                    <button id="clearBtn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <!-- Results Section -->
+                <div class="tool-card" id="resultsCard" style="display: none;">
+                    <h3>Comparison Results</h3>
+                    <div class="diff-stats">
+                        <p><strong>Added:</strong> <span id="addedCount" class="diff-added">0</span> properties</p>
+                        <p><strong>Removed:</strong> <span id="removedCount" class="diff-removed">0</span> properties</p>
+                        <p><strong>Changed:</strong> <span id="changedCount">0</span> properties</p>
+                    </div>
+                    
+                    <div id="diffOutput" class="diff-output"></div>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>About JSON Diff</h3>
+                    <p>JSON Diff helps you identify changes between two JSON objects. Useful for:</p>
+                    <ul>
+                        <li>Comparing API responses across versions</li>
+                        <li>Tracking configuration changes</li>
+                        <li>Code review and debugging</li>
+                        <li>Data migration validation</li>
+                    </ul>
+                    <p class="info-tip">
+                        <strong>Legend:</strong> <span class="diff-added">Green</span> = Added, <span class="diff-removed">Red</span> = Removed, Modified values shown side by side
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="json-diff.js"></script>
+</body>
+</html>

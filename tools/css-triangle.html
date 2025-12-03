@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Triangle Generator - CodeUtility</title>
+    <meta name="description" content="Free online CSS triangle generator. Generate CSS triangles with custom sizes and colors. Fast, secure, runs entirely in your browser.">
+    <meta property="og:title" content="CSS Triangle Generator - CodeUtility">
+    <meta property="og:description" content="Generate CSS triangles with custom sizes and colors.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/css-triangle.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>CSS Triangle Generator</h1>
+                <p>Generate CSS triangles with custom sizes and colors.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- Controls -->
+                <div class="tool-card">
+                    <h3 style="padding-bottom: 16px">Triangle Properties</h3>
+                    
+                    <div class="form-row">
+                        <label for="direction">Direction</label>
+                        <select id="direction">
+                            <option value="up">Up ▲</option>
+                            <option value="down" selected>Down ▼</option>
+                            <option value="left">Left ◀</option>
+                            <option value="right">Right ▶</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="width">Width (px)</label>
+                        <input type="number" id="width" value="100" min="10" max="500">
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="height">Height (px)</label>
+                        <input type="number" id="height" value="80" min="10" max="500">
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="color">Color</label>
+                        <input type="color" id="color" value="#3b82f6">
+                    </div>
+                </div>
+
+                <!-- Preview -->
+                <div class="tool-card">
+                    <h3>Preview</h3>
+                    <div id="previewContainer" style="width: 100%; min-height: 300px; background: #f8fafc; border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 40px;">
+                        <div id="triangle"></div>
+                    </div>
+                </div>
+
+                <!-- CSS Code -->
+                <div class="tool-card">
+                    <label for="cssOutput">CSS Code</label>
+                    <textarea 
+                        id="cssOutput" 
+                        readonly 
+                        placeholder="CSS will appear here..."
+                        aria-label="CSS output"
+                    ></textarea>
+                    <button id="copyBtn" class="btn btn-secondary copy-section-btn">
+                        Copy to Clipboard
+                    </button>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>How CSS Triangles Work</h3>
+                    <p>CSS triangles are created using border tricks. By making an element with zero width/height and manipulating its borders, you can create triangle shapes. This technique is useful for:</p>
+                    <ul>
+                        <li>Tooltips and popovers</li>
+                        <li>Dropdown indicators</li>
+                        <li>Speech bubbles</li>
+                        <li>Arrow icons</li>
+                        <li>Decorative elements</li>
+                    </ul>
+                    <p class="info-tip">
+                        <strong>Tip:</strong> The triangle adjusts in real-time as you change the settings.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="css-triangle.js"></script>
+</body>
+</html>

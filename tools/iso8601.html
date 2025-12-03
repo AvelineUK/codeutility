@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO 8601 Converter - CodeUtility</title>
+    <meta name="description" content="Free online ISO 8601 converter. Convert to and from ISO 8601 date format. Fast, secure, runs entirely in your browser.">
+    <meta property="og:title" content="ISO 8601 Converter - CodeUtility">
+    <meta property="og:description" content="Convert to and from ISO 8601 date format.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/iso8601.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>ISO 8601 Converter</h1>
+                <p>Convert to and from ISO 8601 date format.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- To ISO 8601 -->
+                <div class="tool-card">
+                    <h3>Convert to ISO 8601</h3>
+                    
+                    <div class="form-row">
+                        <label for="inputDate">Date & Time</label>
+                        <input type="datetime-local" id="inputDate">
+                    </div>
+                    
+                    <button id="toISOBtn" class="btn btn-primary convert-btn">Convert to ISO 8601</button>
+                    
+                    <div class="result-section">
+                        <label>ISO 8601 Result</label>
+                        <div class="input-copy-row">
+                            <input type="text" id="isoOutput" readonly placeholder="ISO 8601 format will appear here...">
+                            <button id="copyISO" class="btn btn-secondary">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- From ISO 8601 -->
+                <div class="tool-card">
+                    <h3>Convert from ISO 8601</h3>
+                    
+                    <div class="form-row">
+                        <label for="isoInput">ISO 8601 String</label>
+                        <input type="text" id="isoInput" placeholder="2024-01-15T10:30:00Z">
+                    </div>
+                    
+                    <button id="fromISOBtn" class="btn btn-primary convert-btn">Parse ISO 8601</button>
+                    
+                    <div class="result-section">
+                        <label>Human Readable</label>
+                        <div style="padding: 16px; background: #f5f5f5; border-radius: 6px; margin-bottom: 12px;">
+                            <p id="humanOutput" style="font-size: 1rem; color: #171717;">-</p>
+                        </div>
+                        
+                        <label>Unix Timestamp</label>
+                        <div class="input-copy-row">
+                            <input type="text" id="timestampOutput" readonly placeholder="Unix timestamp...">
+                            <button id="copyTimestamp" class="btn btn-secondary">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Common Formats -->
+                <div class="tool-card" style="background: #f9fafb;">
+                    <h3>Common ISO 8601 Formats</h3>
+                    <div style="font-family: 'SF Mono', 'Monaco', monospace; font-size: 0.9rem; line-height: 2;">
+                        <div><strong>2024-01-15T10:30:00Z</strong> - UTC time</div>
+                        <div><strong>2024-01-15T10:30:00+00:00</strong> - With timezone offset</div>
+                        <div><strong>2024-01-15T10:30:00.123Z</strong> - With milliseconds</div>
+                        <div><strong>2024-01-15</strong> - Date only</div>
+                        <div><strong>10:30:00</strong> - Time only</div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="btn-group">
+                    <button id="nowBtn" class="btn btn-secondary">Use Current Time</button>
+                    <button id="clearBtn" class="btn btn-secondary">Clear All</button>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>About ISO 8601</h3>
+                    <p>ISO 8601 is the international standard for date and time representation. It's used for:</p>
+                    <ul>
+                        <li>API responses and requests</li>
+                        <li>Database timestamps</li>
+                        <li>Log files and system records</li>
+                        <li>Data interchange between systems</li>
+                        <li>Avoiding timezone ambiguity</li>
+                    </ul>
+                    <p class="info-tip">
+                        <strong>Format:</strong> YYYY-MM-DDTHH:mm:ss.sssZ where T separates date and time, and Z indicates UTC.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="iso8601.js"></script>
+</body>
+</html>

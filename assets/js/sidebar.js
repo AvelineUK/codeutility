@@ -73,7 +73,7 @@ function renderSidebar() {
             if (savedScrollPos && sidebarNav) {
                 sidebarNav.scrollTop = parseInt(savedScrollPos);
             }
-        }, 50);
+        }, 0);
     });
 }
 

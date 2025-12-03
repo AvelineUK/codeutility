@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JMESPath Tester - CodeUtility</title>
+    <meta name="description" content="Free online JMESPath tester. Test JMESPath queries on JSON data instantly. Fast, secure, runs entirely in your browser.">
+    <meta property="og:title" content="JMESPath Tester - CodeUtility">
+    <meta property="og:description" content="Test JMESPath queries on JSON data instantly.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/jmespath-tester.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>JMESPath Tester</h1>
+                <p>Test JMESPath queries on JSON data in real-time.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- JSON Input Section -->
+                <div class="tool-card">
+                    <label for="jsonInput">JSON Data</label>
+                    <textarea 
+                        id="jsonInput" 
+                        placeholder='{"users": [{"name": "John", "age": 30}, {"name": "Jane", "age": 25}]}'
+                        aria-label="JSON input"
+                    ></textarea>
+                </div>
+
+                <!-- Query Input Section -->
+                <div class="tool-card">
+                    <label for="queryInput">JMESPath Query</label>
+                    <input 
+                        type="text" 
+                        id="queryInput" 
+                        placeholder="users[0].name"
+                        aria-label="JMESPath query"
+                    >
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="btn-group">
+                    <button id="testBtn" class="btn btn-primary">Test Query</button>
+                    <button id="clearBtn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <!-- Output Section -->
+                <div class="tool-card">
+                    <label for="output">Query Result</label>
+                    <textarea 
+                        id="output" 
+                        readonly 
+                        placeholder="Result will appear here..."
+                        aria-label="Query result"
+                    ></textarea>
+                    <button id="copyBtn" class="btn btn-secondary copy-section-btn">
+                        Copy to Clipboard
+                    </button>
+                </div>
+
+                <!-- Examples Section -->
+                <div class="tool-card" style="background: #f9fafb;">
+                    <h3>Common JMESPath Examples</h3>
+                    <div style="font-family: 'SF Mono', 'Monaco', monospace; font-size: 0.9rem; line-height: 2;">
+                        <div><strong>users[0]</strong> - First user</div>
+                        <div><strong>users[*].name</strong> - All user names</div>
+                        <div><strong>users[?age > `25`]</strong> - Filter by age</div>
+                        <div><strong>users | [0]</strong> - Pipe expression</div>
+                        <div><strong>length(users)</strong> - Array length</div>
+                    </div>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>About JMESPath</h3>
+                    <p>JMESPath is a query language for JSON. It's commonly used in:</p>
+                    <ul>
+                        <li>AWS CLI for filtering API responses</li>
+                        <li>Data transformation and extraction</li>
+                        <li>JSON processing pipelines</li>
+                        <li>API response parsing</li>
+                    </ul>
+                    <p class="info-tip">
+                        <strong>Tip:</strong> Press <code>Enter</code> in the query field to quickly test.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jmespath@0.16.0/jmespath.min.js"></script>
+    <script src="jmespath-tester.js"></script>
+</body>
+</html>

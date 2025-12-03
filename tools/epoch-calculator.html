@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epoch Time Calculator - CodeUtility</title>
+    <meta name="description" content="Free online epoch time calculator. Add or subtract time from Unix timestamps. Fast, secure, runs entirely in your browser.">
+    <meta property="og:title" content="Epoch Time Calculator - CodeUtility">
+    <meta property="og:description" content="Add or subtract time from Unix timestamps.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/epoch-calculator.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>Epoch Time Calculator</h1>
+                <p>Add or subtract time from Unix timestamps.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- Input Section -->
+                <div class="tool-card">
+                    <div class="form-row">
+                        <label for="timestamp">Unix Timestamp</label>
+                        <input type="text" id="timestamp" placeholder="1234567890">
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="operation">Operation</label>
+                        <select id="operation">
+                            <option value="add">Add Time</option>
+                            <option value="subtract">Subtract Time</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="amount">Amount</label>
+                        <input type="number" id="amount" value="1" min="0">
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="unit">Unit</label>
+                        <select id="unit">
+                            <option value="seconds">Seconds</option>
+                            <option value="minutes">Minutes</option>
+                            <option value="hours">Hours</option>
+                            <option value="days" selected>Days</option>
+                            <option value="weeks">Weeks</option>
+                            <option value="months">Months (30 days)</option>
+                            <option value="years">Years (365 days)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="btn-group">
+                    <button id="calculateBtn" class="btn btn-primary">Calculate</button>
+                    <button id="nowBtn" class="btn btn-secondary">Use Current Time</button>
+                    <button id="clearBtn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <!-- Results Section -->
+                <div class="tool-card" style="background: #f9fafb;">
+                    <h3>Result</h3>
+                    
+                    <div class="input-copy-row">
+                        <input type="text" id="resultTimestamp" readonly placeholder="Result timestamp">
+                        <button id="copyTimestamp" class="btn btn-secondary">Copy</button>
+                    </div>
+                    
+                    <div style="margin-top: 16px; padding: 16px; background: #ffffff; border-radius: 6px;">
+                        <p style="font-size: 0.9rem; color: #737373; margin-bottom: 8px;">Human Readable:</p>
+                        <p id="resultHuman" style="font-size: 1rem; color: #171717; font-weight: 500;">-</p>
+                    </div>
+                    
+                    <div style="margin-top: 16px; padding: 16px; background: #ffffff; border-radius: 6px;">
+                        <p style="font-size: 0.9rem; color: #737373; margin-bottom: 8px;">ISO 8601:</p>
+                        <p id="resultISO" style="font-size: 0.95rem; color: #171717; font-family: monospace;">-</p>
+                    </div>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>About Epoch Time</h3>
+                    <p>Unix epoch time (Unix timestamp) is the number of seconds since January 1, 1970 00:00:00 UTC. This calculator helps you:</p>
+                    <ul>
+                        <li>Calculate future or past timestamps</li>
+                        <li>Add time for expiration dates</li>
+                        <li>Subtract time for historical dates</li>
+                        <li>Convert between timestamp and human-readable formats</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="epoch-calculator.js"></script>
+</body>
+</html>
