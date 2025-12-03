@@ -58,6 +58,22 @@ function renderSidebar() {
     // Small delay ensures DOM is fully painted
     requestAnimationFrame(() => {
         sidebarNav.classList.add('loaded');
+        
+        // Setup scroll position saving on the nav element (the one that actually scrolls)
+        if (sidebarNav) {
+            sidebarNav.addEventListener('scroll', () => {
+                sessionStorage.setItem('sidebarScrollPos', sidebarNav.scrollTop);
+            });
+        }
+        
+        // Restore scroll position from previous page
+        // Use setTimeout to ensure sidebar is fully rendered and scrollable
+        setTimeout(() => {
+            const savedScrollPos = sessionStorage.getItem('sidebarScrollPos');
+            if (savedScrollPos && sidebarNav) {
+                sidebarNav.scrollTop = parseInt(savedScrollPos);
+            }
+        }, 50);
     });
 }
 

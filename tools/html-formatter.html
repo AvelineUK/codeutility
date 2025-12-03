@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Formatter - CodeUtility</title>
+    <meta name="description" content="Free online HTML formatter and beautifier. Format and beautify HTML code instantly. Fast, secure, runs entirely in your browser.">
+    <meta property="og:title" content="HTML Formatter - CodeUtility">
+    <meta property="og:description" content="Format and beautify HTML code instantly.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/html-formatter.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>HTML Formatter</h1>
+                <p>Format and beautify HTML code with proper indentation.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- Input Section -->
+                <div class="tool-card">
+                    <label for="input">Input HTML</label>
+                    <textarea 
+                        id="input" 
+                        placeholder="Paste your HTML code here..."
+                        aria-label="Input HTML code"
+                    ></textarea>
+                </div>
+
+                <!-- Options -->
+                <div class="tool-card">
+                    <h3>Formatting Options</h3>
+                    
+                    <label for="indentSize">Indent Size: <span id="indentValue">2</span> spaces</label>
+                    <input type="range" id="indentSize" min="2" max="8" step="2" value="2">
+                    
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" id="wrapAttributes">
+                            Wrap Attributes (1 per line)
+                        </label>
+                        
+                        <label>
+                            <input type="checkbox" id="sortAttributes">
+                            Sort Attributes Alphabetically
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="btn-group">
+                    <button id="formatBtn" class="btn btn-primary">Format HTML</button>
+                    <button id="clearBtn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <!-- Output Section -->
+                <div class="tool-card">
+                    <label for="output">Formatted HTML</label>
+                    <textarea 
+                        id="output" 
+                        readonly 
+                        placeholder="Formatted code will appear here..."
+                        aria-label="Output HTML code"
+                    ></textarea>
+                    <button id="copyBtn" class="btn btn-secondary copy-section-btn">
+                        Copy to Clipboard
+                    </button>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>About HTML Formatting</h3>
+                    <p>Clean, well-formatted HTML is essential for:</p>
+                    <ul>
+                        <li>Improved code readability and maintenance</li>
+                        <li>Easier debugging and troubleshooting</li>
+                        <li>Better collaboration with team members</li>
+                        <li>Consistent code style across projects</li>
+                    </ul>
+                    <p class="info-tip">
+                        <strong>Tip:</strong> Press <code>Ctrl+Enter</code> in the input field to quickly format.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prettier@3.1.1/standalone.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prettier@3.1.1/plugins/html.js"></script>
+    <script src="html-formatter.js"></script>
+</body>
+</html>
