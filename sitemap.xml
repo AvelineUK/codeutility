@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://codeutility.dev/</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/base64</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/url-encoder</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/case-converter</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/hash-generator</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/html-entity</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/unicode-converter</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/ascii-converter</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/hex-converter</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/binary-converter</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/rot13</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/morse-code</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/character-counter</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/word-counter</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/slug-generator</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/json-formatter</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/json-validator</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/csv-to-json</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/json-to-csv</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/yaml-to-json</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/json-to-yaml</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/xml-to-json</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/json-to-xml</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/json-minifier</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/json-diff</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/jmespath-tester</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/uuid</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/password</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/lorem-ipsum</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/qr-code</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/barcode</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/random-number</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/random-string</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/color-palette</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/dummy-data</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/regex-tester</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/diff-checker</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/cron-builder</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/sql-formatter</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/html-formatter</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/css-formatter</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/js-formatter</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/html-minifier</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/css-minifier</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/js-minifier</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/base-converter</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/git-commit</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/color-picker</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/gradient-generator</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/box-shadow</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/border-radius</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/flexbox</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/css-grid</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/css-triangle</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/image-resizer</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/timestamp</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/epoch-calculator</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/timezone-converter</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/date-diff</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/tools/iso8601</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/contact</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/privacy</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://codeutility.dev/terms</loc>
+  <lastmod>2025-12-03T13:48:51+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
