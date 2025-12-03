@@ -1,0 +1,24 @@
+# robots.txt for CodeUtility.dev
+# Last updated: 2025-12-03
+
+User-agent: *
+Allow: /
+
+# Block known aggressive crawlers that provide no SEO value
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://codeutility.dev/sitemap.xml

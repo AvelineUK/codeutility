@@ -983,6 +983,54 @@ input[type="color"] {
     text-align: right;
 }
 
+/* Console Output (for JavaScript Runner & TypeScript Compiler) */
+.console-output {
+    min-height: 200px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 16px;
+    background: #1e1e1e;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    font-family: 'SF Mono', 'Monaco', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #d4d4d4;
+}
+
+.console-output:empty::before {
+    content: 'Console output will appear here...';
+    color: #737373;
+    font-style: italic;
+}
+
+.console-entry {
+    padding: 4px 0;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.console-log {
+    color: #d4d4d4;
+}
+
+.console-error {
+    color: #f87171;
+}
+
+.console-warn {
+    color: #fbbf24;
+}
+
+.console-info {
+    color: #60a5fa;
+}
+
+.console-return {
+    color: #a78bfa;
+    font-style: italic;
+}
+
 /* Responsive */
 @media (max-width: 1200px) {
     .cron-fields-row {

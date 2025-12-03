@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript Compiler - CodeUtility</title>
+    <meta name="description" content="Free online TypeScript compiler. Compile TypeScript to JavaScript and run it in your browser. Fast, secure, runs entirely in your browser.">
+    <meta property="og:title" content="TypeScript Compiler - CodeUtility">
+    <meta property="og:description" content="Compile and run TypeScript code instantly in your browser.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/typescript-compiler.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>TypeScript Compiler</h1>
+                <p>Compile TypeScript to JavaScript and run it in your browser.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- TypeScript Code Editor -->
+                <div class="tool-card">
+                    <label for="tsInput">TypeScript Code</label>
+                    <textarea 
+                        id="tsInput" 
+                        placeholder="// Write your TypeScript code here
+interface Person {
+    name: string;
+    age: number;
+}
+
+function greet(person: Person): string {
+    return `Hello, ${person.name}! You are ${person.age} years old.`;
+}
+
+const user: Person = {
+    name: 'Alice',
+    age: 30
+};
+
+console.log(greet(user));"
+                        aria-label="TypeScript code input"
+                        style="min-height: 300px; font-family: 'SF Mono', 'Monaco', monospace; font-size: 0.9rem;"
+                    ></textarea>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="btn-group">
+                    <button id="compileBtn" class="btn btn-primary">Compile & Run</button>
+                    <button id="compileOnlyBtn" class="btn btn-secondary">Compile Only</button>
+                    <button id="clearBtn" class="btn btn-secondary">Clear All</button>
+                </div>
+
+                <!-- Compiled JavaScript Output -->
+                <div class="tool-card">
+                    <label for="jsOutput">Compiled JavaScript</label>
+                    <textarea 
+                        id="jsOutput" 
+                        readonly
+                        placeholder="Compiled JavaScript will appear here..."
+                        aria-label="Compiled JavaScript output"
+                        style="min-height: 200px; font-family: 'SF Mono', 'Monaco', monospace; font-size: 0.9rem;"
+                    ></textarea>
+                    <button id="copyBtn" class="btn btn-secondary" style="margin-top: 12px;">
+                        Copy JavaScript
+                    </button>
+                </div>
+
+                <!-- Console Output -->
+                <div class="tool-card">
+                    <label for="consoleOutput">Console Output</label>
+                    <div 
+                        id="consoleOutput" 
+                        class="console-output"
+                    ></div>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>About TypeScript Compiler</h3>
+                    <p>This tool compiles TypeScript to JavaScript using the official TypeScript compiler running in your browser. Features:</p>
+                    <ul>
+                        <li>Full TypeScript type checking and compilation</li>
+                        <li>ES2015+ target output</li>
+                        <li>View compiled JavaScript before running</li>
+                        <li>Console output with error handling</li>
+                        <li>All compilation happens locally - nothing sent to servers</li>
+                    </ul>
+                    <p class="info-tip">
+                        <strong>Tip:</strong> Press <code>Ctrl+Enter</code> to quickly compile and run your TypeScript code.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <!-- TypeScript Compiler Library (loaded from CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typescript/5.3.3/typescript.min.js"></script>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="typescript-compiler.js"></script>
+</body>
+</html>

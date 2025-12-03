@@ -67,6 +67,8 @@ const TOOL_CATEGORIES = [
     {
         name: "Developer Tools",
         tools: [
+            { name: "JavaScript Runner", href: "javascript-runner.html" },
+            { name: "TypeScript Compiler", href: "typescript-compiler.html" },
             { name: "Regex Tester", href: "regex-tester.html" },
             { name: "Diff Checker", href: "diff-checker.html" },
             { name: "Cron Expression Builder", href: "cron-builder.html" },
