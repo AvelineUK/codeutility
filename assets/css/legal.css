@@ -1,0 +1,120 @@
+/* Legal Pages Styles (Contact, Privacy, Terms) */
+
+.legal-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.legal-main {
+    flex: 1;
+    padding: 80px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.legal-main h1 {
+    margin-bottom: 16px;
+}
+
+.legal-main .last-updated {
+    color: #737373;
+    margin-bottom: 40px;
+}
+
+.legal-main section {
+    margin-bottom: 40px;
+}
+
+.legal-main h2 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.legal-main h3 {
+    font-size: 1.2rem;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.legal-main p {
+    line-height: 1.7;
+    color: #525252;
+}
+
+.legal-main p + p {
+    margin-top: 12px;
+}
+
+.legal-main ul {
+    margin-left: 20px;
+    line-height: 1.8;
+    color: #525252;
+}
+
+.legal-main a {
+    color: #3b82f6;
+}
+
+.legal-main a:hover {
+    color: #2563eb;
+}
+
+/* Contact Page Specific */
+.contact-intro {
+    font-size: 1.1rem;
+    color: #737373;
+    margin-bottom: 16px;
+}
+
+.contact-info-box {
+    margin-top: 20px;
+    padding: 16px;
+    background: #f9fafb;
+    border-radius: 8px;
+}
+
+.contact-info-box h2 {
+    margin-bottom: 16px;
+    font-size: 1.3rem;
+}
+
+.contact-info-box p {
+    color: #737373;
+    margin-bottom: 12px;
+}
+
+/* Privacy & Terms Specific */
+.privacy-highlight {
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.terms-acceptance-box {
+    margin-top: 60px;
+    padding: 20px;
+    background: #f9fafb;
+    border-left: 4px solid #3b82f6;
+    border-radius: 4px;
+}
+
+.terms-acceptance-box p {
+    color: #525252;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .legal-main {
+        padding: 60px 20px;
+    }
+
+    .contact-form {
+        padding: 24px;
+    }
+
+    .contact-info-box {
+        padding: 24px;
+    }
+}

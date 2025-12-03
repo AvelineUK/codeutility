@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Playground - CodeUtility</title>
+    <meta name="description" content="Free online Flexbox playground. Learn and test CSS Flexbox properties interactively. Fast, secure, runs entirely in your browser.">
+    <meta property="og:title" content="Flexbox Playground - CodeUtility">
+    <meta property="og:description" content="Learn and test CSS Flexbox properties interactively.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <link rel="canonical" href="https://codeutility.dev/tools/flexbox.html">
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <style>
+        .flex-container-preview {
+            min-height: 300px;
+            background: #f8fafc;
+            border: 2px dashed #3b82f6;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .flex-item {
+            background: #3b82f6;
+            color: white;
+            padding: 20px;
+            margin: 5px;
+            border-radius: 6px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="../index.html" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>Flexbox Playground</h1>
+                <p>Learn and experiment with CSS Flexbox properties.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- Preview -->
+                <div class="tool-card">
+                    <h3>Preview</h3>
+                    <div id="flexContainer" class="flex-container-preview">
+                        <div class="flex-item">1</div>
+                        <div class="flex-item">2</div>
+                        <div class="flex-item">3</div>
+                        <div class="flex-item">4</div>
+                        <div class="flex-item">5</div>
+                    </div>
+                </div>
+
+                <!-- Container Properties -->
+                <div class="tool-card">
+                    <h3>Container Properties</h3>
+                    
+                    <div class="form-row">
+                        <label for="flexDirection">flex-direction</label>
+                        <select id="flexDirection">
+                            <option value="row" selected>row</option>
+                            <option value="row-reverse">row-reverse</option>
+                            <option value="column">column</option>
+                            <option value="column-reverse">column-reverse</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="justifyContent">justify-content</label>
+                        <select id="justifyContent">
+                            <option value="flex-start" selected>flex-start</option>
+                            <option value="flex-end">flex-end</option>
+                            <option value="center">center</option>
+                            <option value="space-between">space-between</option>
+                            <option value="space-around">space-around</option>
+                            <option value="space-evenly">space-evenly</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="alignItems">align-items</label>
+                        <select id="alignItems">
+                            <option value="stretch" selected>stretch</option>
+                            <option value="flex-start">flex-start</option>
+                            <option value="flex-end">flex-end</option>
+                            <option value="center">center</option>
+                            <option value="baseline">baseline</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="flexWrap">flex-wrap</label>
+                        <select id="flexWrap">
+                            <option value="nowrap" selected>nowrap</option>
+                            <option value="wrap">wrap</option>
+                            <option value="wrap-reverse">wrap-reverse</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="alignContent">align-content</label>
+                        <select id="alignContent">
+                            <option value="stretch" selected>stretch</option>
+                            <option value="flex-start">flex-start</option>
+                            <option value="flex-end">flex-end</option>
+                            <option value="center">center</option>
+                            <option value="space-between">space-between</option>
+                            <option value="space-around">space-around</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <label for="gap">gap (px)</label>
+                        <input type="number" id="gap" value="5" min="0" max="50">
+                    </div>
+                </div>
+
+                <!-- Item Count -->
+                <div class="tool-card">
+                    <h3>Items</h3>
+                    
+                    <div class="form-row">
+                        <label for="itemCount">Number of Items</label>
+                        <input type="number" id="itemCount" value="5" min="1" max="10">
+                    </div>
+                </div>
+
+                <!-- CSS Output -->
+                <div class="tool-card">
+                    <label for="cssOutput">CSS Code</label>
+                    <textarea 
+                        id="cssOutput" 
+                        readonly 
+                        placeholder="CSS will appear here..."
+                        aria-label="CSS output"
+                    ></textarea>
+                    <button id="copyBtn" class="btn btn-secondary copy-section-btn">
+                        Copy to Clipboard
+                    </button>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>Flexbox Quick Reference</h3>
+                    <p><strong>Container Properties:</strong></p>
+                    <ul>
+                        <li><strong>flex-direction:</strong> Defines the main axis (row/column)</li>
+                        <li><strong>justify-content:</strong> Aligns items along the main axis</li>
+                        <li><strong>align-items:</strong> Aligns items along the cross axis</li>
+                        <li><strong>flex-wrap:</strong> Controls wrapping of items</li>
+                        <li><strong>align-content:</strong> Aligns wrapped lines</li>
+                        <li><strong>gap:</strong> Space between items</li>
+                    </ul>
+                    <p class="info-tip">
+                        <strong>Tip:</strong> Experiment with different combinations to understand how Flexbox works!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="../contact.html">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../assets/js/sidebar-content.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script src="flexbox.js"></script>
+</body>
+</html>
