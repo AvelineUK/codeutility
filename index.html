@@ -14,6 +14,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="CodeUtility - Fast, Privacy-Focused Developer Tools">
     <meta name="twitter:description" content="Free developer utilities that run entirely in your browser.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://cdn.jsdelivr.net https://unpkg.com https://cdnjs.cloudflare.com; script-src-elem 'self' https://cdn.jsdelivr.net https://unpkg.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; connect-src 'self' https://cdn.jsdelivr.net https://unpkg.com https://cdnjs.cloudflare.com; manifest-src 'self'; font-src 'self';">
     <link rel="canonical" href="https://codeutility.dev">
     <link rel="stylesheet" href="assets/css/global.css">
     <link rel="stylesheet" href="assets/css/components.css">
@@ -24,7 +25,7 @@
     <!-- Header -->
     <header class="site-header">
         <div class="container">
-            <a href="index.html" class="site-logo">CodeUtility</a>
+            <a href="index" class="site-logo">CodeUtility</a>
             <nav class="site-nav">
                 <a href="#tools">All Tools</a>
                 <a href="#about">About</a>
@@ -65,59 +66,59 @@
             <div class="tool-category" data-category="text-encoding">
                 <h3 class="category-heading">Text & Encoding</h3>
                 <div class="tool-grid">
-                    <a href="tools/base64.html" class="tool-card" data-keywords="base64 encode decode encoder decoder">
+                    <a href="tools/base64" class="tool-card" data-keywords="base64 encode decode encoder decoder">
                         <h3>Base64 Encoder/Decoder</h3>
                         <p>Encode text to Base64 or decode Base64 to text</p>
                     </a>
-                    <a href="tools/url-encoder.html" class="tool-card" data-keywords="url encode decode encoder decoder uri">
+                    <a href="tools/url-encoder" class="tool-card" data-keywords="url encode decode encoder decoder uri">
                         <h3>URL Encoder/Decoder</h3>
                         <p>Encode or decode URL components and query strings</p>
                     </a>
-                    <a href="tools/case-converter.html" class="tool-card" data-keywords="case convert camel snake pascal kebab">
+                    <a href="tools/case-converter" class="tool-card" data-keywords="case convert camel snake pascal kebab">
                         <h3>Case Converter</h3>
                         <p>Convert between camelCase, snake_case, PascalCase, and more</p>
                     </a>
-                    <a href="tools/hash-generator.html" class="tool-card" data-keywords="hash sha md5 sha256 sha512">
+                    <a href="tools/hash-generator" class="tool-card" data-keywords="hash sha md5 sha256 sha512">
                         <h3>Hash Generator</h3>
                         <p>Generate SHA-1, SHA-256, SHA-512, and MD5 hashes</p>
                     </a>
-                    <a href="tools/html-entity.html" class="tool-card" data-keywords="html entity encode decode entities">
+                    <a href="tools/html-entity" class="tool-card" data-keywords="html entity encode decode entities">
                         <h3>HTML Entity Encoder</h3>
                         <p>Convert special characters to HTML entities and back</p>
                     </a>
-                    <a href="tools/unicode-converter.html" class="tool-card" data-keywords="unicode convert converter utf8">
+                    <a href="tools/unicode-converter" class="tool-card" data-keywords="unicode convert converter utf8">
                         <h3>Unicode Converter</h3>
                         <p>Convert between Unicode and different encodings</p>
                     </a>
-                    <a href="tools/ascii-converter.html" class="tool-card" data-keywords="ascii convert converter text">
+                    <a href="tools/ascii-converter" class="tool-card" data-keywords="ascii convert converter text">
                         <h3>ASCII Converter</h3>
                         <p>Convert text to ASCII codes and vice versa</p>
                     </a>
-                    <a href="tools/hex-converter.html" class="tool-card" data-keywords="hex hexadecimal convert converter">
+                    <a href="tools/hex-converter" class="tool-card" data-keywords="hex hexadecimal convert converter">
                         <h3>Hex Converter</h3>
                         <p>Convert between hexadecimal and text</p>
                     </a>
-                    <a href="tools/binary-converter.html" class="tool-card" data-keywords="binary convert converter">
+                    <a href="tools/binary-converter" class="tool-card" data-keywords="binary convert converter">
                         <h3>Binary Converter</h3>
                         <p>Convert between binary and text</p>
                     </a>
-                    <a href="tools/rot13.html" class="tool-card" data-keywords="rot13 cipher encode decode">
+                    <a href="tools/rot13" class="tool-card" data-keywords="rot13 cipher encode decode">
                         <h3>ROT13 Encoder</h3>
                         <p>Encode and decode text using ROT13 cipher</p>
                     </a>
-                    <a href="tools/morse-code.html" class="tool-card" data-keywords="morse code translator convert">
+                    <a href="tools/morse-code" class="tool-card" data-keywords="morse code translator convert">
                         <h3>Morse Code Translator</h3>
                         <p>Convert text to Morse code and back</p>
                     </a>
-                    <a href="tools/character-counter.html" class="tool-card" data-keywords="character counter count text">
+                    <a href="tools/character-counter" class="tool-card" data-keywords="character counter count text">
                         <h3>Character Counter</h3>
                         <p>Count characters, words, and lines in text</p>
                     </a>
-                    <a href="tools/word-counter.html" class="tool-card" data-keywords="word counter count text">
+                    <a href="tools/word-counter" class="tool-card" data-keywords="word counter count text">
                         <h3>Word Counter</h3>
                         <p>Count words and analyze text statistics</p>
                     </a>
-                    <a href="tools/slug-generator.html" class="tool-card" data-keywords="slug generator url friendly">
+                    <a href="tools/slug-generator" class="tool-card" data-keywords="slug generator url friendly">
                         <h3>Slug Generator</h3>
                         <p>Generate URL-friendly slugs from text</p>
                     </a>
@@ -128,47 +129,47 @@
             <div class="tool-category" data-category="json-data">
                 <h3 class="category-heading">JSON & Data</h3>
                 <div class="tool-grid">
-                    <a href="tools/json-formatter.html" class="tool-card" data-keywords="json format formatter beautify pretty print">
+                    <a href="tools/json-formatter" class="tool-card" data-keywords="json format formatter beautify pretty print">
                         <h3>JSON Formatter</h3>
                         <p>Format and beautify JSON with syntax highlighting</p>
                     </a>
-                    <a href="tools/json-validator.html" class="tool-card" data-keywords="json validate validator validation">
+                    <a href="tools/json-validator" class="tool-card" data-keywords="json validate validator validation">
                         <h3>JSON Validator</h3>
                         <p>Validate JSON syntax and find errors</p>
                     </a>
-                    <a href="tools/csv-to-json.html" class="tool-card" data-keywords="csv json convert converter">
+                    <a href="tools/csv-to-json" class="tool-card" data-keywords="csv json convert converter">
                         <h3>CSV to JSON</h3>
                         <p>Convert CSV data to JSON format</p>
                     </a>
-                    <a href="tools/json-to-csv.html" class="tool-card" data-keywords="json csv convert converter">
+                    <a href="tools/json-to-csv" class="tool-card" data-keywords="json csv convert converter">
                         <h3>JSON to CSV</h3>
                         <p>Convert JSON data to CSV format</p>
                     </a>
-                    <a href="tools/yaml-to-json.html" class="tool-card" data-keywords="yaml json convert converter yml">
+                    <a href="tools/yaml-to-json" class="tool-card" data-keywords="yaml json convert converter yml">
                         <h3>YAML to JSON</h3>
                         <p>Convert YAML to JSON format</p>
                     </a>
-                    <a href="tools/json-to-yaml.html" class="tool-card" data-keywords="json yaml convert converter yml">
+                    <a href="tools/json-to-yaml" class="tool-card" data-keywords="json yaml convert converter yml">
                         <h3>JSON to YAML</h3>
                         <p>Convert JSON to YAML format</p>
                     </a>
-                    <a href="tools/xml-to-json.html" class="tool-card" data-keywords="xml json convert converter">
+                    <a href="tools/xml-to-json" class="tool-card" data-keywords="xml json convert converter">
                         <h3>XML to JSON</h3>
                         <p>Convert XML to JSON format</p>
                     </a>
-                    <a href="tools/json-to-xml.html" class="tool-card" data-keywords="json xml convert converter">
+                    <a href="tools/json-to-xml" class="tool-card" data-keywords="json xml convert converter">
                         <h3>JSON to XML</h3>
                         <p>Convert JSON to XML format</p>
                     </a>
-                    <a href="tools/json-minifier.html" class="tool-card" data-keywords="json minify minifier compress">
+                    <a href="tools/json-minifier" class="tool-card" data-keywords="json minify minifier compress">
                         <h3>JSON Minifier</h3>
                         <p>Minify and compress JSON data</p>
                     </a>
-                    <a href="tools/json-diff.html" class="tool-card" data-keywords="json diff difference compare">
+                    <a href="tools/json-diff" class="tool-card" data-keywords="json diff difference compare">
                         <h3>JSON Diff</h3>
                         <p>Compare two JSON objects and see differences</p>
                     </a>
-                    <a href="tools/jmespath-tester.html" class="tool-card" data-keywords="jmespath query json test">
+                    <a href="tools/jmespath-tester" class="tool-card" data-keywords="jmespath query json test">
                         <h3>JMESPath Tester</h3>
                         <p>Test JMESPath queries on JSON data</p>
                     </a>
@@ -179,39 +180,39 @@
             <div class="tool-category" data-category="generators">
                 <h3 class="category-heading">Generators</h3>
                 <div class="tool-grid">
-                    <a href="tools/uuid.html" class="tool-card" data-keywords="uuid guid generator generate unique id">
+                    <a href="tools/uuid" class="tool-card" data-keywords="uuid guid generator generate unique id">
                         <h3>UUID Generator</h3>
                         <p>Generate random UUIDs (v4)</p>
                     </a>
-                    <a href="tools/password.html" class="tool-card" data-keywords="password generate generator random secure">
+                    <a href="tools/password" class="tool-card" data-keywords="password generate generator random secure">
                         <h3>Password Generator</h3>
                         <p>Generate secure random passwords with custom rules</p>
                     </a>
-                    <a href="tools/lorem-ipsum.html" class="tool-card" data-keywords="lorem ipsum placeholder text generator">
+                    <a href="tools/lorem-ipsum" class="tool-card" data-keywords="lorem ipsum placeholder text generator">
                         <h3>Lorem Ipsum Generator</h3>
                         <p>Generate placeholder text for mockups and designs</p>
                     </a>
-                    <a href="tools/qr-code.html" class="tool-card" data-keywords="qr code generator generate">
+                    <a href="tools/qr-code" class="tool-card" data-keywords="qr code generator generate">
                         <h3>QR Code Generator</h3>
                         <p>Generate QR codes from text or URLs</p>
                     </a>
-                    <a href="tools/barcode.html" class="tool-card" data-keywords="barcode generator generate">
+                    <a href="tools/barcode" class="tool-card" data-keywords="barcode generator generate">
                         <h3>Barcode Generator</h3>
                         <p>Generate various types of barcodes</p>
                     </a>
-                    <a href="tools/random-number.html" class="tool-card" data-keywords="random number generator generate">
+                    <a href="tools/random-number" class="tool-card" data-keywords="random number generator generate">
                         <h3>Random Number Generator</h3>
                         <p>Generate random numbers with custom ranges</p>
                     </a>
-                    <a href="tools/random-string.html" class="tool-card" data-keywords="random string generator generate">
+                    <a href="tools/random-string" class="tool-card" data-keywords="random string generator generate">
                         <h3>Random String Generator</h3>
                         <p>Generate random strings with custom options</p>
                     </a>
-                    <a href="tools/color-palette.html" class="tool-card" data-keywords="color palette generator generate scheme">
+                    <a href="tools/color-palette" class="tool-card" data-keywords="color palette generator generate scheme">
                         <h3>Color Palette Generator</h3>
                         <p>Generate beautiful color palettes and schemes</p>
                     </a>
-                    <a href="tools/dummy-data.html" class="tool-card" data-keywords="dummy data generator fake generate">
+                    <a href="tools/dummy-data" class="tool-card" data-keywords="dummy data generator fake generate">
                         <h3>Dummy Data Generator</h3>
                         <p>Generate fake data for testing and development</p>
                     </a>
@@ -222,59 +223,59 @@
             <div class="tool-category" data-category="developer">
                 <h3 class="category-heading">Developer Tools</h3>
                 <div class="tool-grid">
-                    <a href="tools/javascript-runner.html" class="tool-card" data-keywords="javascript runner execute run code node js">
+                    <a href="tools/javascript-runner" class="tool-card" data-keywords="javascript runner execute run code node js">
                         <h3>JavaScript Runner</h3>
                         <p>Execute JavaScript code in your browser with console output</p>
                     </a>
-                    <a href="tools/typescript-compiler.html" class="tool-card" data-keywords="typescript compiler compile ts javascript">
+                    <a href="tools/typescript-compiler" class="tool-card" data-keywords="typescript compiler compile ts javascript">
                         <h3>TypeScript Compiler</h3>
                         <p>Compile TypeScript to JavaScript and run it in your browser</p>
                     </a>
-                    <a href="tools/regex-tester.html" class="tool-card" data-keywords="regex regexp regular expression tester test">
+                    <a href="tools/regex-tester" class="tool-card" data-keywords="regex regexp regular expression tester test">
                         <h3>Regex Tester</h3>
                         <p>Test regular expressions with live highlighting</p>
                     </a>
-                    <a href="tools/diff-checker.html" class="tool-card" data-keywords="diff difference compare text checker">
+                    <a href="tools/diff-checker" class="tool-card" data-keywords="diff difference compare text checker">
                         <h3>Diff Checker</h3>
                         <p>Compare two texts and see the differences</p>
                     </a>
-                    <a href="tools/cron-builder.html" class="tool-card" data-keywords="cron expression builder schedule">
+                    <a href="tools/cron-builder" class="tool-card" data-keywords="cron expression builder schedule">
                         <h3>Cron Expression Builder</h3>
                         <p>Build and understand cron expressions visually</p>
                     </a>
-                    <a href="tools/sql-formatter.html" class="tool-card" data-keywords="sql format formatter beautify">
+                    <a href="tools/sql-formatter" class="tool-card" data-keywords="sql format formatter beautify">
                         <h3>SQL Formatter</h3>
                         <p>Format and beautify SQL queries</p>
                     </a>
-                    <a href="tools/html-formatter.html" class="tool-card" data-keywords="html format formatter beautify">
+                    <a href="tools/html-formatter" class="tool-card" data-keywords="html format formatter beautify">
                         <h3>HTML Formatter</h3>
                         <p>Format and beautify HTML code</p>
                     </a>
-                    <a href="tools/css-formatter.html" class="tool-card" data-keywords="css format formatter beautify">
+                    <a href="tools/css-formatter" class="tool-card" data-keywords="css format formatter beautify">
                         <h3>CSS Formatter</h3>
                         <p>Format and beautify CSS code</p>
                     </a>
-                    <a href="tools/js-formatter.html" class="tool-card" data-keywords="javascript js format formatter beautify">
+                    <a href="tools/js-formatter" class="tool-card" data-keywords="javascript js format formatter beautify">
                         <h3>JavaScript Formatter</h3>
                         <p>Format and beautify JavaScript code</p>
                     </a>
-                    <a href="tools/html-minifier.html" class="tool-card" data-keywords="html minify minifier compress">
+                    <a href="tools/html-minifier" class="tool-card" data-keywords="html minify minifier compress">
                         <h3>HTML Minifier</h3>
                         <p>Minify and compress HTML code</p>
                     </a>
-                    <a href="tools/css-minifier.html" class="tool-card" data-keywords="css minify minifier compress">
+                    <a href="tools/css-minifier" class="tool-card" data-keywords="css minify minifier compress">
                         <h3>CSS Minifier</h3>
                         <p>Minify and compress CSS code</p>
                     </a>
-                    <a href="tools/js-minifier.html" class="tool-card" data-keywords="javascript js minify minifier compress">
+                    <a href="tools/js-minifier" class="tool-card" data-keywords="javascript js minify minifier compress">
                         <h3>JavaScript Minifier</h3>
                         <p>Minify and compress JavaScript code</p>
                     </a>
-                    <a href="tools/base-converter.html" class="tool-card" data-keywords="base converter binary hex decimal octal">
+                    <a href="tools/base-converter" class="tool-card" data-keywords="base converter binary hex decimal octal">
                         <h3>Base Converter</h3>
                         <p>Convert between binary, hex, decimal, and octal</p>
                     </a>
-                    <a href="tools/git-commit.html" class="tool-card" data-keywords="git commit message generator">
+                    <a href="tools/git-commit" class="tool-card" data-keywords="git commit message generator">
                         <h3>Git Commit Message Generator</h3>
                         <p>Generate conventional commit messages</p>
                     </a>
@@ -285,35 +286,35 @@
             <div class="tool-category" data-category="css-frontend">
                 <h3 class="category-heading">CSS & Frontend</h3>
                 <div class="tool-grid">
-                    <a href="tools/color-picker.html" class="tool-card" data-keywords="color picker hex rgb hsl converter">
+                    <a href="tools/color-picker" class="tool-card" data-keywords="color picker hex rgb hsl converter">
                         <h3>Color Picker</h3>
                         <p>Pick colors and convert between HEX, RGB, and HSL</p>
                     </a>
-                    <a href="tools/gradient-generator.html" class="tool-card" data-keywords="css gradient generator linear radial">
+                    <a href="tools/gradient-generator" class="tool-card" data-keywords="css gradient generator linear radial">
                         <h3>CSS Gradient Generator</h3>
                         <p>Create CSS gradients visually</p>
                     </a>
-                    <a href="tools/box-shadow.html" class="tool-card" data-keywords="css box shadow generator">
+                    <a href="tools/box-shadow" class="tool-card" data-keywords="css box shadow generator">
                         <h3>Box Shadow Generator</h3>
                         <p>Generate CSS box-shadow with live preview</p>
                     </a>
-                    <a href="tools/border-radius.html" class="tool-card" data-keywords="css border radius generator rounded corners">
+                    <a href="tools/border-radius" class="tool-card" data-keywords="css border radius generator rounded corners">
                         <h3>Border Radius Generator</h3>
                         <p>Generate CSS border-radius with visual preview</p>
                     </a>
-                    <a href="tools/flexbox.html" class="tool-card" data-keywords="css flexbox playground tester">
+                    <a href="tools/flexbox" class="tool-card" data-keywords="css flexbox playground tester">
                         <h3>Flexbox Playground</h3>
                         <p>Learn and test CSS Flexbox properties</p>
                     </a>
-                    <a href="tools/css-grid.html" class="tool-card" data-keywords="css grid generator layout">
+                    <a href="tools/css-grid" class="tool-card" data-keywords="css grid generator layout">
                         <h3>CSS Grid Generator</h3>
                         <p>Generate CSS Grid layouts visually</p>
                     </a>
-                    <a href="tools/css-triangle.html" class="tool-card" data-keywords="css triangle generator shape">
+                    <a href="tools/css-triangle" class="tool-card" data-keywords="css triangle generator shape">
                         <h3>CSS Triangle Generator</h3>
                         <p>Generate CSS triangles with custom sizes and colors</p>
                     </a>
-                    <a href="tools/image-resizer.html" class="tool-card" data-keywords="image resize resizer scale">
+                    <a href="tools/image-resizer" class="tool-card" data-keywords="image resize resizer scale">
                         <h3>Image Resizer</h3>
                         <p>Resize images in your browser</p>
                     </a>
@@ -324,23 +325,23 @@
             <div class="tool-category" data-category="time-date">
                 <h3 class="category-heading">Time & Date</h3>
                 <div class="tool-grid">
-                    <a href="tools/timestamp.html" class="tool-card" data-keywords="unix timestamp converter epoch time">
+                    <a href="tools/timestamp" class="tool-card" data-keywords="unix timestamp converter epoch time">
                         <h3>Unix Timestamp Converter</h3>
                         <p>Convert between Unix timestamps and human dates</p>
                     </a>
-                    <a href="tools/epoch-calculator.html" class="tool-card" data-keywords="epoch time calculator unix">
+                    <a href="tools/epoch-calculator" class="tool-card" data-keywords="epoch time calculator unix">
                         <h3>Epoch Time Calculator</h3>
                         <p>Calculate time differences and add/subtract time</p>
                     </a>
-                    <a href="tools/timezone-converter.html" class="tool-card" data-keywords="timezone converter time zone">
+                    <a href="tools/timezone-converter" class="tool-card" data-keywords="timezone converter time zone">
                         <h3>Timezone Converter</h3>
                         <p>Convert times between different timezones</p>
                     </a>
-                    <a href="tools/date-diff.html" class="tool-card" data-keywords="date difference calculator days between">
+                    <a href="tools/date-diff" class="tool-card" data-keywords="date difference calculator days between">
                         <h3>Date Difference Calculator</h3>
                         <p>Calculate the difference between two dates</p>
                     </a>
-                    <a href="tools/iso8601.html" class="tool-card" data-keywords="iso 8601 converter date time">
+                    <a href="tools/iso8601" class="tool-card" data-keywords="iso 8601 converter date time">
                         <h3>ISO 8601 Converter</h3>
                         <p>Convert to and from ISO 8601 date format</p>
                     </a>
@@ -371,11 +372,11 @@
                 <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
                 
                 <nav class="footer-links">
-                    <a href="index.html">Home</a>
+                    <a href="index">Home</a>
                     <a href="#about">About</a>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms of Service</a>
-                    <a href="contact.html">Contact</a>
+                    <a href="privacy">Privacy Policy</a>
+                    <a href="terms">Terms of Service</a>
+                    <a href="contact">Contact</a>
                 </nav>
                 
                 <p class="footer-copyright">© 2025 CodeUtility</p>
