@@ -624,6 +624,12 @@ input[type="range"] {
     gap: 14px;
 }
 
+.cron-fields-row-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
 .cron-field-group {
     margin-bottom: 24px;
     padding: 20px;
@@ -742,7 +748,7 @@ input[type="range"] {
 
 .checkboxes-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 8px;
     margin-top: 8px;
 }
