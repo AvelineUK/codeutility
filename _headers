@@ -11,35 +11,71 @@
 /tools/json-to-yaml.html
   Content-Security-Policy: default-src 'none'; script-src 'self' https://cdn.jsdelivr.net; script-src-elem 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
 
+/tools/json-to-yaml
+  Content-Security-Policy: default-src 'none'; script-src 'self' https://cdn.jsdelivr.net; script-src-elem 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
+
 /tools/js-minifier.html
+  Content-Security-Policy: default-src 'none'; script-src 'self' https://cdn.jsdelivr.net; script-src-elem 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
+
+/tools/js-minifier
   Content-Security-Policy: default-src 'none'; script-src 'self' https://cdn.jsdelivr.net; script-src-elem 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
 
 /tools/js-formatter.html
   Content-Security-Policy: default-src 'none'; script-src 'self' https://cdn.jsdelivr.net; script-src-elem 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
 
+/tools/js-formatter
+  Content-Security-Policy: default-src 'none'; script-src 'self' https://cdn.jsdelivr.net; script-src-elem 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
+
 /tools/jmespath-tester.html
+  Content-Security-Policy: default-src 'none'; script-src 'self' https://cdn.jsdelivr.net; script-src-elem 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
+
+/tools/jmespath-tester
   Content-Security-Policy: default-src 'none'; script-src 'self' https://cdn.jsdelivr.net; script-src-elem 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
 
 /tools/html-minifier.html
   Content-Security-Policy: default-src 'none'; script-src 'self' https://unpkg.com; script-src-elem 'self' https://unpkg.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
 
+/tools/html-minifier
+  Content-Security-Policy: default-src 'none'; script-src 'self' https://unpkg.com; script-src-elem 'self' https://unpkg.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
+
 /tools/html-formatter.html
+  Content-Security-Policy: default-src 'none'; script-src 'self' https://cdn.jsdelivr.net; script-src-elem 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
+
+/tools/html-formatter
   Content-Security-Policy: default-src 'none'; script-src 'self' https://cdn.jsdelivr.net; script-src-elem 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
 
 /tools/css-formatter.html
   Content-Security-Policy: default-src 'none'; script-src 'self' https://cdn.jsdelivr.net; script-src-elem 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
 
+/tools/css-formatter
+  Content-Security-Policy: default-src 'none'; script-src 'self' https://cdn.jsdelivr.net; script-src-elem 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
+
 /tools/barcode.html
+  Content-Security-Policy: default-src 'none'; script-src 'self' https://cdnjs.cloudflare.com; script-src-elem 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
+
+/tools/barcode
   Content-Security-Policy: default-src 'none'; script-src 'self' https://cdnjs.cloudflare.com; script-src-elem 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
 
 /tools/yaml-to-json.html
   Content-Security-Policy: default-src 'none'; script-src 'self' https://cdn.jsdelivr.net; script-src-elem 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
 
+/tools/yaml-to-json
+  Content-Security-Policy: default-src 'none'; script-src 'self' https://cdn.jsdelivr.net; script-src-elem 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
+
 /tools/typescript-compiler.html
+  Content-Security-Policy: default-src 'none'; script-src 'self' https://cdnjs.cloudflare.com; script-src-elem 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
+
+/tools/typescript-compiler
   Content-Security-Policy: default-src 'none'; script-src 'self' https://cdnjs.cloudflare.com; script-src-elem 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
 
 /tools/sql-formatter.html
   Content-Security-Policy: default-src 'none'; script-src 'self' https://cdn.jsdelivr.net; script-src-elem 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
 
+/tools/sql-formatter
+  Content-Security-Policy: default-src 'none'; script-src 'self' https://cdn.jsdelivr.net; script-src-elem 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
+
 /tools/qr-code.html
+  Content-Security-Policy: default-src 'none'; script-src 'self' https://cdnjs.cloudflare.com; script-src-elem 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
+
+/tools/qr-code
   Content-Security-Policy: default-src 'none'; script-src 'self' https://cdnjs.cloudflare.com; script-src-elem 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; connect-src 'self'; manifest-src 'self'; font-src 'self';
