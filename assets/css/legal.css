@@ -54,11 +54,11 @@
 }
 
 .legal-main a {
-    color: #3b82f6;
+    color: #15803d;
 }
 
 .legal-main a:hover {
-    color: #2563eb;
+    color: #166534;
 }
 
 /* Contact Page Specific */
@@ -95,7 +95,7 @@
     margin-top: 60px;
     padding: 20px;
     background: #f9fafb;
-    border-left: 4px solid #3b82f6;
+    border-left: 4px solid #15803d;
     border-radius: 4px;
 }
 

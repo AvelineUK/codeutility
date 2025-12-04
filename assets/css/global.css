@@ -37,13 +37,13 @@ p {
 }
 
 a {
-    color: #3b82f6;
+    color: #15803d;
     text-decoration: none;
     transition: color 0.2s;
 }
 
 a:hover {
-    color: #2563eb;
+    color: #166534;
 }
 
 /* Code/Monospace */

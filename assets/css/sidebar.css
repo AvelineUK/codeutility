@@ -97,7 +97,7 @@ body {
 
 .sidebar-search input:focus {
     outline: none;
-    border-color: #3b82f6;
+    border-color: #15803d;
 }
 
 /* Navigation */
@@ -150,12 +150,12 @@ body {
 
 .nav-category a:hover {
     background: #f5f5f5;
-    color: #3b82f6;
+    color: #15803d;
 }
 
 .nav-category a.active {
     background: #eff6ff;
-    color: #3b82f6;
+    color: #15803d;
 }
 
 /* Hidden when filtered */

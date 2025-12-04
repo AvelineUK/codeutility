@@ -104,3 +104,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     }
 });
+
+document.querySelectorAll('input[type="range"]').forEach(slider => {
+  const update = () => {
+    const min = Number(slider.min ?? 0);
+    const max = Number(slider.max ?? 100);
+    const val = Number(slider.value);
+    const pct = ( (val - min) / (max - min) ) * 100;
+    // Use a percent string for the CSS var
+    slider.style.setProperty('--pct', pct + '%');
+  };
+
+  slider.addEventListener('input', update, { passive: true });
+  // initialize on page load
+  update();
+});

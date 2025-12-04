@@ -40,7 +40,7 @@
 
 .tool-search:focus {
     outline: none;
-    border-color: #3b82f6;
+    border-color: #15803d;
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
@@ -184,10 +184,10 @@
 .category-heading {
     font-size: 1.3rem;
     font-weight: 600;
-    color: #2563eb;
+    color: #166534;
     margin-bottom: 24px;
     padding-bottom: 12px;
-    border-bottom: 3px solid #3b82f6;
+    border-bottom: 3px solid #15803d;
 }
 
 /* Tool Grid */
@@ -196,7 +196,6 @@
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 0px 20px;
     align-items: stretch;
-
 }
 
 /* Tool Card */
@@ -212,7 +211,7 @@
 }
 
 .tool-card:hover {
-    border-color: #3b82f6;
+    border-color: #15803d;
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
     background:#dbeafe7a;
 }
@@ -252,7 +251,7 @@
 }
 
 .no-results a {
-    color: #3b82f6;
+    color: #15803d;
     text-decoration: underline;
 }
 

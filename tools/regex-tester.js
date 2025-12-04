@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let resultsHtml = `<div style="color: #166534; font-weight: 500; margin-bottom: 12px;">Found ${matches.length} match${matches.length !== 1 ? 'es' : ''}</div>`;
             
             matches.forEach((match, index) => {
-                resultsHtml += `<div style="margin-bottom: 8px; padding: 8px; background: #ffffff; border-left: 3px solid #3b82f6; border-radius: 4px;">
+                resultsHtml += `<div style="margin-bottom: 8px; padding: 8px; background: #ffffff; border-left: 3px solid #15803d; border-radius: 4px;">
                     <strong>Match ${index + 1}:</strong> "${escapeHtml(match[0])}"<br>
                     <span style="color: #737373; font-size: 0.85rem;">Position: ${match.index}</span>
                 </div>`;
