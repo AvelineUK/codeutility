@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 Encoder/Decoder - CodeUtility</title>
+    <meta name="description" content="Free online Base64 encoder and decoder. Fast, secure, runs entirely in your browser.">
+    <meta property="og:title" content="Base64 Encoder/Decoder - CodeUtility">
+    <meta property="og:description" content="Free online Base64 encoder and decoder. Runs in your browser.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="CodeUtility">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://cdn.jsdelivr.net https://unpkg.com https://cdnjs.cloudflare.com; script-src-elem 'self' https://cdn.jsdelivr.net https://unpkg.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'self'; connect-src 'self' https://cdn.jsdelivr.net https://unpkg.com https://cdnjs.cloudflare.com; manifest-src 'self'; font-src 'self';">
+    <link rel="canonical" href="https://codeutility.dev//base64">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/sidebar.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <a href="/index" class="site-logo">CodeUtility</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="/index" class="sidebar-logo">CodeUtility</a>
+        </div>
+
+        <div class="sidebar-search">
+            <input type="text" id="toolSearch" placeholder="Search tools..." />
+        </div>
+
+        <!-- Navigation populated by JavaScript -->
+        <nav class="sidebar-nav"></nav>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h1>Base64 Encoder / Decoder</h1>
+                <p>Encode text to Base64 or decode Base64 to text.</p>
+            </div>
+
+            <div class="tool-container">
+                <!-- Input Section -->
+                <div class="tool-card">
+                    <label for="input">Input</label>
+                    <textarea 
+                        id="input" 
+                        placeholder="Enter text to encode or Base64 string to decode..."
+                        aria-label="Input text"
+                    ></textarea>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="btn-group">
+                    <button id="encodeBtn" class="btn btn-primary">Encode to Base64</button>
+                    <button id="decodeBtn" class="btn btn-primary">Decode from Base64</button>
+                    <button id="clearBtn" class="btn btn-secondary">Clear</button>
+                </div>
+
+                <!-- Output Section -->
+                <div class="tool-card">
+                    <label for="output">Output</label>
+                    <textarea 
+                        id="output" 
+                        readonly 
+                        placeholder="Result will appear here..."
+                        aria-label="Output text"
+                    ></textarea>
+                    <button id="copyBtn" class="btn btn-secondary" style="margin-top: 12px;">
+                        Copy to Clipboard
+                    </button>
+                </div>
+
+                <!-- Info Section -->
+                <div class="tool-card info-card">
+                    <h3>About Base64 Encoding</h3>
+                    <p>Base64 is a binary-to-text encoding scheme that represents binary data in an ASCII string format. It's commonly used for:</p>
+                    <ul>
+                        <li>Embedding images in HTML/CSS</li>
+                        <li>Encoding data in URLs and emails</li>
+                        <li>Storing binary data in text-based formats (JSON, XML)</li>
+                        <li>HTTP Basic Authentication</li>
+                    </ul>
+                    <p class="info-tip">
+                        <strong>Tip:</strong> Press <code>Ctrl+Enter</code> in the input field to quickly encode.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hidden SEO-friendly navigation -->
+        <nav class="seo-nav" style="display:none;">
+        <!-- Text & Encoding -->
+        <a href="base64">Base64 Encoder/Decoder</a>
+        <a href="url-encoder">URL Encoder/Decoder</a>
+        <a href="case-converter">Case Converter</a>
+        <a href="hash-generator">Hash Generator</a>
+        <a href="html-entity">HTML Entity Encoder</a>
+        <a href="jwt-decoder">JWT Decoder</a>
+        <a href="unicode-converter">Unicode Converter</a>
+        <a href="ascii-converter">ASCII Converter</a>
+        <a href="hex-converter">Hex Converter</a>
+        <a href="binary-converter">Binary Converter</a>
+        <a href="rot13">ROT13 Encoder</a>
+        <a href="morse-code">Morse Code Translator</a>
+        <a href="character-counter">Character Counter</a>
+        <a href="word-counter">Word Counter</a>
+        <a href="slug-generator">Slug Generator</a>
+
+        <!-- JSON & Data -->
+        <a href="json-formatter">JSON Formatter</a>
+        <a href="json-validator">JSON Validator</a>
+        <a href="csv-to-json">CSV to JSON</a>
+        <a href="json-to-csv">JSON to CSV</a>
+        <a href="yaml-to-json">YAML to JSON</a>
+        <a href="json-to-yaml">JSON to YAML</a>
+        <a href="xml-to-json">XML to JSON</a>
+        <a href="json-to-xml">JSON to XML</a>
+        <a href="json-minifier">JSON Minifier</a>
+        <a href="json-diff">JSON Diff</a>
+        <a href="jmespath-tester">JMESPath Tester</a>
+
+        <!-- Generators -->
+        <a href="uuid">UUID Generator</a>
+        <a href="password">Password Generator</a>
+        <a href="lorem-ipsum">Lorem Ipsum Generator</a>
+        <a href="qr-code">QR Code Generator</a>
+        <a href="barcode">Barcode Generator</a>
+        <a href="random-number">Random Number Generator</a>
+        <a href="random-string">Random String Generator</a>
+        <a href="color-palette">Color Palette Generator</a>
+        <a href="dummy-data">Dummy Data Generator</a>
+
+        <!-- Developer Tools -->
+        <a href="javascript-runner">JavaScript Runner</a>
+        <a href="typescript-compiler">TypeScript Compiler</a>
+        <a href="regex-tester">Regex Tester</a>
+        <a href="diff-checker">Diff Checker</a>
+        <a href="cron-builder">Cron Expression Builder</a>
+        <a href="sql-formatter">SQL Formatter</a>
+        <a href="html-formatter">HTML Formatter</a>
+        <a href="css-formatter">CSS Formatter</a>
+        <a href="js-formatter">JavaScript Formatter</a>
+        <a href="html-minifier">HTML Minifier</a>
+        <a href="css-minifier">CSS Minifier</a>
+        <a href="js-minifier">JavaScript Minifier</a>
+        <a href="base-converter">Base Converter</a>
+        <a href="git-commit">Git Commit Message Generator</a>
+
+        <!-- CSS & Frontend -->
+        <a href="color-picker">Color Picker</a>
+        <a href="gradient-generator">Gradient Generator</a>
+        <a href="box-shadow">Box Shadow Generator</a>
+        <a href="border-radius">Border Radius Generator</a>
+        <a href="flexbox">Flexbox Playground</a>
+        <a href="css-grid">CSS Grid Generator</a>
+        <a href="css-triangle">CSS Triangle Generator</a>
+        <a href="image-resizer">Image Resizer</a>
+
+        <!-- Time & Date -->
+        <a href="timestamp">Unix Timestamp Converter</a>
+        <a href="epoch-calculator">Epoch Time Calculator</a>
+        <a href="timezone-converter">Timezone Converter</a>
+        <a href="date-diff">Date Difference Calculator</a>
+        <a href="iso8601">ISO 8601 Converter</a>
+
+        <!-- Legal / Contact -->
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/contact">Contact</a>
+        </nav>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-tagline">All tools run entirely in your browser. No data is collected or sent to any server.</p>
+                
+                <nav class="footer-links">
+                    <a href="/index">Home</a>
+                    <a href="/index#about">About</a>
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Service</a>
+                    <a href="/contact">Contact</a>
+                </nav>
+                
+                <p class="footer-copyright">&copy; 2025 CodeUtility</p>
+            </div>
+        </footer>
+    </main>
+    <script src="/assets/js/sidebar-content.js"></script>
+    <script src="/assets/js/sidebar.js"></script>
+    <script src="base64.js"></script>
+</body>
+</html>
