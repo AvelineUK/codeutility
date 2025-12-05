@@ -1,4 +1,0 @@
-[[redirects]]
-  from = "/tools/*"
-  to = "/tools/:splat.html"
-  status = 200
