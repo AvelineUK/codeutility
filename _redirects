@@ -75,7 +75,6 @@
 /tools/character-counter.html    /character-counter    301
 /tools/word-counter.html    /word-counter    301
 /tools/slug-generator.html    /slug-generator    301
-/tools/slug-generator.html    /slug-generator    301
 /tools/json-formatter.html    /json-formatter    301
 /tools/json-validator.html    /json-validator    301
 /tools/csv-to-json.html    /csv-to-json    301
@@ -123,3 +122,5 @@
 /tools/timezone-converter.html    /timezone-converter    301
 /tools/date-diff.html    /date-diff    301
 /tools/iso8601.html    /iso8601    301
+/tools/slug-generator/   /slug-generator    301
+/tools/slug-generator/*  /slug-generator    301
