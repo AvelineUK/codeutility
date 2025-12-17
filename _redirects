@@ -1,5 +1,6 @@
 /*.html    /:splat    301
-
+/index    /    301
+/index.html    /    301
 /base64.html    /base64    301
 /url-encoder.html    /url-encoder    301
 /case-converter.html    /case-converter    301
@@ -65,7 +66,6 @@
 /privacy.html    /privacy    301
 /terms.html    /terms    301
 /contact.html    /contact    301
-
 /tools    /    301
 /tools/   /    301
 /tools/base64    /base64    301
